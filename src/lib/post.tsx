@@ -3,7 +3,7 @@ import { parseISO, format } from 'date-fns';
 import fs from 'fs';
 import { join } from 'path';
 
-// `src/content/markdown`を処理
+// `src/content/post`を処理
 const postDirectory = join(process.cwd(), 'src', 'content', 'post');
 
 export function getPostBySlug(slug) {
