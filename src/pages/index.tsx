@@ -12,6 +12,7 @@ function TopPage({ posts }) {
       <SEO title={siteMeta.title} description={null} />
       <Layout>
         <div>
+          <h1>testtest</h1>
           <PostList posts={posts} />
         </div>
       </Layout>

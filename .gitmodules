@@ -1,4 +1,4 @@
-[submodule "src/content/tools/timer"]
-	path = src/content/tools/timer
+[submodule "src/pages/tools/timer"]
+	path = src/pages/tools/timer
 	url = github-main:sakelog/nextjs_timer.git
 	branch = main
