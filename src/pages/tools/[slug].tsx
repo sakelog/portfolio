@@ -1,4 +1,4 @@
-import hogehoge from './timer/src/component/timer';
+import hogehoge from '../../content/tools/timer/src/component/timer';
 
 function Test() {
   return <div>{hogehoge(180)}</div>;
