@@ -1,30 +1,21 @@
-import Layout from '../component/layout';
-import PostList from '../component/post-list';
-import SEO from '../component/seo';
+import { getAllProfileComponents } from '../lib/getProfileComponent';
+import Profile from '../component/profile/profile';
 
-import siteMeta from '../config';
-
-import { getAllPosts } from '../lib/post';
-
-function TopPage({ posts }) {
+const TopPage = ({ profileComponents }) => {
   return (
-    <>
-      <SEO title={siteMeta.title} description={null} />
-      <Layout>
-        <div>
-          <h1>testtest</h1>
-          <PostList posts={posts} />
-        </div>
-      </Layout>
-    </>
+    <div>
+      <Profile Components={profileComponents} />
+    </div>
   );
-}
+};
 
 export async function getStaticProps() {
-  const posts = getAllPosts();
+  const profileComponents = getAllProfileComponents();
 
   return {
-    props: { posts },
+    props: {
+      profileComponents,
+    },
   };
 }
 

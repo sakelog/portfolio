@@ -10,17 +10,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.57",
-    "@types/material-ui": "^0.21.8",
     "date-fns": "^2.16.1",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "next": "^10.0.3",
+    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "react-markdown": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "^14.14.14",
