@@ -5,7 +5,7 @@ import { join } from 'path';
 // profile用のコンテンツ格納先
 const profileDirectory = join(process.cwd(), 'src', 'content', 'profile');
 
-export function getProfileComponentBySlug(slug) {
+export function getProfileComponentMDBySlug(slug) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(profileDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -15,9 +15,10 @@ export function getProfileComponentBySlug(slug) {
   return { slug: realSlug, title, content };
 }
 
-export function getAllProfileComponents() {
-  const slugs = fs.readdirSync(profileDirectory);
-  const components = slugs.map((slug) => getProfileComponentBySlug(slug));
+export function getAllProfileComponentsMD() {
+  const allslugs = fs.readdirSync(profileDirectory);
+  const slugs = allslugs.filter((slug) => slug.match(/.*\.md$/));
+  const components = slugs.map((slug) => getProfileComponentMDBySlug(slug));
 
   return components;
 }

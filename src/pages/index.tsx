@@ -1,20 +1,23 @@
-import { getAllProfileComponents } from '../lib/getProfileComponent';
+import { getAllProfileComponentsMD } from '../lib/getProfileComponentMD';
+import { getAllProfileComponentsJson } from '../lib/getProfileComponentJson';
 import Profile from '../component/profile/profile';
 
-const TopPage = ({ profileComponents }) => {
+const TopPage = ({ profileComponentsMD, profileComponentsJson }) => {
   return (
     <div>
-      <Profile Components={profileComponents} />
+      <Profile MD={profileComponentsMD} Json={profileComponentsJson} />
     </div>
   );
 };
 
 export async function getStaticProps() {
-  const profileComponents = getAllProfileComponents();
+  const profileComponentsMD = getAllProfileComponentsMD();
+  const profileComponentsJson = getAllProfileComponentsJson();
 
   return {
     props: {
-      profileComponents,
+      profileComponentsMD,
+      profileComponentsJson,
     },
   };
 }
