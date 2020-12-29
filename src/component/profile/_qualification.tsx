@@ -1,11 +1,13 @@
 import ReactMarkdown from 'react-markdown';
 
-const Qualification = ({ data, content }) => {
-  const input = content;
+const Qualification: profile.component.func = (props) => {
+  const mdContent = props.md.content;
+  const mdInput: string = mdContent && mdContent;
+
   return (
     <section>
       <h2>保有資格</h2>
-      <ReactMarkdown source={input} />
+      <ReactMarkdown source={mdInput} />
     </section>
   );
 };

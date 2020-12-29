@@ -1,13 +1,14 @@
 import ReactMarkdown from 'react-markdown';
 
-const Career = ({ data, content }) => {
-  const input = content;
+const Carrer: profile.component.func = (props) => {
+  const mdContent = props.md.content;
+  const mdInput: string = mdContent && mdContent;
   return (
     <section>
       <h2>経歴</h2>
-      <ReactMarkdown source={input} />
+      <ReactMarkdown source={mdInput} />
     </section>
   );
 };
 
-export default Career;
+export default Carrer;

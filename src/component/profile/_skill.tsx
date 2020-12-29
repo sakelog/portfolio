@@ -1,6 +1,4 @@
-import ReactMarkdown from 'react-markdown';
-
-const Skill = ({ mdData, mdContent, jsonContent }) => {
+const Skill: profile.component.func = (props) => {
   const STAR = '★★★★★';
   const STAR_1 = <span>{STAR}</span>;
   const STAR_2 = <span>{STAR}</span>;
@@ -8,8 +6,9 @@ const Skill = ({ mdData, mdContent, jsonContent }) => {
   const STAR_4 = <span>{STAR}</span>;
   const STAR_5 = <span>{STAR}</span>;
 
-  const input = mdContent && mdContent;
-  const skill_Lists = jsonContent.skill_lists.map((skill_list) => {
+  const jsonContent: profile.skill_jsonContent = props.json.content;
+
+  const skill_lists = jsonContent.skill_lists.map((skill_list) => {
     const categoryTitle = <h3>{skill_list.category}</h3>;
     const skillTag = skill_list.skills.map((skill) => {
       const starTag =
@@ -42,8 +41,7 @@ const Skill = ({ mdData, mdContent, jsonContent }) => {
   return (
     <section>
       <h2>スキル</h2>
-      {skill_Lists}
-      <ReactMarkdown source={input} />
+      {skill_lists}
     </section>
   );
 };

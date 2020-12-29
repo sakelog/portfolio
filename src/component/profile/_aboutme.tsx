@@ -1,11 +1,12 @@
 import ReactMarkdown from 'react-markdown';
 
-const AboutMe = ({ data, content }) => {
-  const input = content;
+const AboutMe: profile.component.func = (props) => {
+  const mdContent = props.md.content;
+  const mdInput = mdContent && mdContent;
   return (
     <section>
       <h2>Who is sake?</h2>
-      <ReactMarkdown source={input} />
+      <ReactMarkdown source={mdInput} />
     </section>
   );
 };

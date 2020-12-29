@@ -5,7 +5,7 @@ import Profile from '../component/profile/profile';
 const TopPage = ({ profileComponentsMD, profileComponentsJson }) => {
   return (
     <div>
-      <Profile MD={profileComponentsMD} Json={profileComponentsJson} />
+      <Profile md={profileComponentsMD} json={profileComponentsJson} />
     </div>
   );
 };

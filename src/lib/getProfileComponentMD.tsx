@@ -10,9 +10,8 @@ export function getProfileComponentMDBySlug(slug) {
   const fullPath = join(profileDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
-  const title = data.title || '';
 
-  return { slug: realSlug, title, content };
+  return { slug: realSlug, data, content };
 }
 
 export function getAllProfileComponentsMD() {
