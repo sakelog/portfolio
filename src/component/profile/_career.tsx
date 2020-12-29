@@ -18,7 +18,7 @@ const Carrer: profile.component.func = (props) => {
   });
   return (
     <section>
-      <h2 className={baseStyles.sectionTitle}>経歴</h2>
+      <h3 className={baseStyles.sectionTitle}>経歴</h3>
       <ul>{career_list}</ul>
     </section>
   );

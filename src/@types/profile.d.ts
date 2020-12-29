@@ -25,6 +25,22 @@ namespace profile {
     declare type func = (props:props) => JSX.Element
   }
 
+  declare interface qualification_jsonContent extends JSON {
+    qualifications?: [
+      {
+        qualification: string;
+      }
+    ],
+    badges?: [
+      {
+        src: string;
+        alt: string;
+        width: number;
+        height: number;
+      }
+    ]
+  }
+
   declare interface career_jsonContent extends JSON {
     career_list?: [
       {

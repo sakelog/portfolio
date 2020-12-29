@@ -3,15 +3,16 @@
 .sectionTitle {
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 2rem;
   color: $gray-darker;
+  margin: 2rem auto 1rem;
   &:before,
   &:after {
     content: '';
     height: 1px;
     flex-grow: 1;
-    background: $gray-darker;
+    background: $theme-color;
   }
   &:before {
     margin-right: 1rem;

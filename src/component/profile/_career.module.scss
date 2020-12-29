@@ -17,13 +17,13 @@
     .ymd {
       flex-grow: 1;
       text-align: right;
-      padding: 0.6rem;
+      padding: 20px;
       color: $gray;
     }
     section {
       width: 70%;
       border-left: 1px dashed $gray;
-      padding: 0.6rem 4rem 0.6rem 0.6rem;
+      padding: 20px;
       position: relative;
       .title {
         margin: 0;
@@ -31,11 +31,11 @@
       &:before {
         content: '';
         background: $theme-color;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 20px;
+        height: 20px;
         position: absolute;
-        top: 0.8rem;
-        left: -0.4rem;
+        top: 24px;
+        left: -10px;
         border-radius: 100%;
       }
     }

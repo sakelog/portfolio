@@ -1,8 +1,13 @@
 @use './variables' as *;
+@use './mixin' as *;
 
 html {
   font-family: $font-default;
   color: $text-color-default;
+  font-size: 4vw;
+  @include mq(sm) {
+    font-size: 1.4vw;
+  }
   body {
     padding: 0.4rem;
   }
