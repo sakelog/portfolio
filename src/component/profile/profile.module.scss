@@ -1,5 +1,8 @@
 @use '../../styles/Foundation/variables' as *;
 
+.root {
+  padding: 1rem 2rem;
+}
 .sectionTitle {
   display: flex;
   align-items: center;

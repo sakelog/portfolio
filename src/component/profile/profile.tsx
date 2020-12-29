@@ -13,8 +13,8 @@ const CAREER = 'career';
 const SKILL = 'skill';
 
 const Profile: profile.container.func = (props) => {
-  const AboutMeComponentMD: profile.md = searchComponentBySlug(
-    props.md,
+  const AboutMeComponentJson: profile.json = searchComponentBySlug(
+    props.json,
     ABOUT_ME
   );
 
@@ -34,8 +34,8 @@ const Profile: profile.container.func = (props) => {
   );
 
   return (
-    <article>
-      <AboutMe md={AboutMeComponentMD} />
+    <article className={styles.root}>
+      <AboutMe json={AboutMeComponentJson} />
       <Qualification json={QualificationComponentJson} />
       <Career json={CareerComponentJson} />
       <Skill json={SkillComponentJson} />

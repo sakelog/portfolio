@@ -1,1 +1,26 @@
+@use '../../styles/Foundation/variables' as *;
+@use '../../styles/Foundation/mixin' as *;
 
+.aboutme_list {
+  margin: auto 0.6rem;
+  .item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    .title {
+      background: $theme-color;
+      color: #ffffff;
+      padding: 10px;
+    }
+    .content {
+      margin: 0.6rem 0;
+    }
+    @include mq(md) {
+      flex-direction: row;
+      align-items: center;
+      .content {
+        margin-left: 0.6rem;
+      }
+    }
+  }
+}
