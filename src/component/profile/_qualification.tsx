@@ -4,8 +4,6 @@ import baseStyles from './profile.module.scss';
 import styles from './_qualification.module.scss';
 
 const Qualification: profile.component.func = (props) => {
-  //const mdContent = props.md.content;
-  //const mdInput: string = mdContent && mdContent;
   const jsonContent: profile.qualification_jsonContent = props.json.content;
   const qualification_list = jsonContent.qualifications.map((qualification) => {
     return (

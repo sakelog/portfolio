@@ -14,7 +14,7 @@ const AboutMe: profile.component.func = (props) => {
 
   return (
     <section>
-      <h2 className={baseStyles.sectionTitle}>Who is sake?</h2>
+      <h3 className={baseStyles.sectionTitle}>Who is sake?</h3>
       <ul className={styles.aboutme_list}>{aboutme_list}</ul>
     </section>
   );

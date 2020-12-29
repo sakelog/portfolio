@@ -10,7 +10,7 @@ const Carrer: profile.component.func = (props) => {
       <li key={career.title} className={styles.item}>
         <p className={styles.ymd}>{career.ymd}</p>
         <section>
-          <h3 className={styles.title}>{career.title}</h3>
+          <h4 className={styles.title}>{career.title}</h4>
           <p className={styles.detail}>{detail}</p>
         </section>
       </li>
