@@ -1,8 +1,9 @@
 export default {
   title: 'sake portfolio',
   author: 'sake',
-  description: 'A starter blog converting Gatsby -> Next.',
+  description: 'システムエンジニア sakeのポートフォリオサイトです',
   social: {
-    twitter: '',
+    twitter: 'sake_engineer',
+    github: 'sakelog',
   },
 };

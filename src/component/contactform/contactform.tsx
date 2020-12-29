@@ -3,7 +3,7 @@ import styles from './contactform.module.scss';
 const ContactForm = () => {
   return (
     <section className={styles.root}>
-      <h2>お問い合わせ</h2>
+      <h2 id="contact">お問い合わせ</h2>
       <form name="portfolio-contact" method="POST" data-netlify="true">
         <div className={styles.form_wrapper}>
           <div className={styles.form_item}>

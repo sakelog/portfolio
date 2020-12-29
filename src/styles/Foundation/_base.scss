@@ -8,9 +8,16 @@ html {
   @include mq(sm) {
     font-size: 1.4vw;
   }
+  a {
+    color: $theme-color;
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   body {
-    padding: 0.4rem;
-
+    overflow-x: hidden;
     h2 {
       margin: 2rem auto 1rem;
       font-size: 2.4rem;

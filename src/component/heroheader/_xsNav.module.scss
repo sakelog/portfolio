@@ -1,0 +1,13 @@
+@use '../../styles/Foundation/variables' as *;
+@use '../../styles/Foundation/mixin' as *;
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid $theme-color;
+  @include mq(sm) {
+    display: none;
+  }
+}

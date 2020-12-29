@@ -1,0 +1,39 @@
+@use '../../styles/Foundation/variables' as *;
+@use '../../styles/Foundation/mixin' as *;
+
+.root {
+  margin-top: 1rem;
+  border-top: 1px solid $theme-color;
+  position: relative;
+  @include mq(md) {
+    padding-left: 1rem;
+    flex-grow: 1;
+    margin-top: 0;
+    border-top: 0;
+  }
+  .menuItems {
+    margin: 0.6rem auto;
+    display: flex;
+    position: relative;
+    background: #ffffff;
+    li {
+      margin: auto 0.4rem;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .icon {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+.siteTitle {
+  margin: 1rem auto;
+  font-family: $font-logo;
+  font-size: 2rem;
+  @include mq(xs) {
+    margin: 0;
+  }
+}
