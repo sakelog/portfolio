@@ -1,13 +1,25 @@
+import { MdStar } from 'react-icons/md';
+
 import styles from './_skill.module.scss';
 
 const Skill: profile.component.func = (props) => {
   const STAR = (
     <>
-      <span>★</span>
-      <span>★</span>
-      <span>★</span>
-      <span>★</span>
-      <span>★</span>
+      <span>
+        <MdStar />
+      </span>
+      <span>
+        <MdStar />
+      </span>
+      <span>
+        <MdStar />
+      </span>
+      <span>
+        <MdStar />
+      </span>
+      <span>
+        <MdStar />
+      </span>
     </>
   );
   const STAR_1 = (
