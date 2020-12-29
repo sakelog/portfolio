@@ -34,7 +34,7 @@ const ContactForm = () => {
               </div>
             </label>
           </div>
-          <button>送信</button>
+          <button type="submit">送信</button>
         </div>
       </form>
     </section>

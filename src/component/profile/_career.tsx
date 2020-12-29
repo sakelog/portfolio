@@ -1,4 +1,3 @@
-import baseStyles from './profile.module.scss';
 import styles from './_career.module.scss';
 
 const Carrer: profile.component.func = (props) => {
@@ -18,7 +17,7 @@ const Carrer: profile.component.func = (props) => {
   });
   return (
     <section>
-      <h3 className={baseStyles.sectionTitle}>経歴</h3>
+      <h3>経歴</h3>
       <ul>{career_list}</ul>
     </section>
   );

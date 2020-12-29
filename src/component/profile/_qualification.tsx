@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import baseStyles from './profile.module.scss';
 import styles from './_qualification.module.scss';
 
 const Qualification: profile.component.func = (props) => {
@@ -27,7 +26,7 @@ const Qualification: profile.component.func = (props) => {
 
   return (
     <section>
-      <h3 className={baseStyles.sectionTitle}>保有資格</h3>
+      <h3>保有資格</h3>
       <ul className={styles.qualification_list}>{qualification_list}</ul>
       <ul className={styles.badge_list}>{badge_list}</ul>
     </section>

@@ -17,5 +17,27 @@ html {
       color: $theme-color;
       border-bottom: 2px double $theme-color;
     }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2rem;
+      color: $gray-dark;
+      margin: 2rem auto 1rem;
+      &:before,
+      &:after {
+        content: '';
+        height: 1px;
+        flex-grow: 1;
+        background: $theme-color;
+      }
+      &:before {
+        margin-right: 1rem;
+      }
+      &:after {
+        margin-left: 1rem;
+      }
+    }
   }
 }

@@ -1,4 +1,3 @@
-import baseStyles from './profile.module.scss';
 import styles from './_skill.module.scss';
 
 const Skill: profile.component.func = (props) => {
@@ -65,7 +64,7 @@ const Skill: profile.component.func = (props) => {
   });
   return (
     <section>
-      <h3 className={baseStyles.sectionTitle}>スキル</h3>
+      <h3>スキル</h3>
       <section className={styles.skill_items}>{skill_lists}</section>
     </section>
   );

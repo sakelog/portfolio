@@ -35,6 +35,7 @@ const Profile: profile.container.func = (props) => {
 
   return (
     <article className={styles.root}>
+      <h2>自己紹介</h2>
       <AboutMe json={AboutMeComponentJson} />
       <Career json={CareerComponentJson} />
       <Skill json={SkillComponentJson} />

@@ -1,4 +1,5 @@
-import baseStyles from './profile.module.scss';
+import Image from 'next/image';
+
 import styles from './_aboutme.module.scss';
 
 const AboutMe: profile.component.func = (props) => {
@@ -14,7 +15,17 @@ const AboutMe: profile.component.func = (props) => {
 
   return (
     <section>
-      <h3 className={baseStyles.sectionTitle}>Who is sake?</h3>
+      <h3>Who is sake?</h3>
+      <div>
+        <Image
+          src="/img/profile.png"
+          alt="sake プロフィール画像"
+          width={200}
+          height={200}
+          layout="intrinsic"
+          loading="lazy"
+        />
+      </div>
       <ul className={styles.aboutme_list}>{aboutme_list}</ul>
     </section>
   );
