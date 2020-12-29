@@ -1,3 +1,5 @@
+import baseStyles from './profile.module.scss';
+
 const Skill: profile.component.func = (props) => {
   const STAR = '★★★★★';
   const STAR_1 = <span>{STAR}</span>;
@@ -40,7 +42,7 @@ const Skill: profile.component.func = (props) => {
   });
   return (
     <section>
-      <h2>スキル</h2>
+      <h2 className={baseStyles.sectionTitle}>スキル</h2>
       {skill_lists}
     </section>
   );

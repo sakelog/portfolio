@@ -5,6 +5,8 @@ import Skill from './_skill';
 
 import { searchComponentBySlug } from '../../lib/searchComponentBySlug';
 
+import styles from './profile.module.scss';
+
 const ABOUT_ME = 'aboutme';
 const QUALIFICATION = 'qualification';
 const CAREER = 'career';

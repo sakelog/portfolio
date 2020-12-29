@@ -1,0 +1,6 @@
+@use './variables' as *;
+
+html {
+  font-family: $font-default;
+  color: $text-color-default;
+}

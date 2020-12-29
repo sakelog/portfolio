@@ -17,7 +17,9 @@
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-markdown": "^5.0.3"
+    "react-markdown": "^5.0.3",
+    "reset-css-complete": "^2.0.0",
+    "sass": "^1.30.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.14",

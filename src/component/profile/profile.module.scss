@@ -1,0 +1,22 @@
+@use '../../styles/Foundation/variables' as *;
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 2rem;
+  color: $gray-darker;
+  &:before,
+  &:after {
+    content: '';
+    height: 1px;
+    flex-grow: 1;
+    background: $gray-darker;
+  }
+  &:before {
+    margin-right: 1rem;
+  }
+  &:after {
+    margin-left: 1rem;
+  }
+}
