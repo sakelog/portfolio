@@ -25,6 +25,15 @@ namespace profile {
     declare type func = (props:props) => JSX.Element
   }
 
+  declare interface career_jsonContent extends JSON {
+    career_list?: [
+      {
+        ymd: string;
+        title: string;
+        detail: string;
+      }
+    ]
+  }
   declare interface skill_jsonContent extends JSON {
     skill_lists?: [
       {

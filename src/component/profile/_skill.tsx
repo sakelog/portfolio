@@ -34,10 +34,10 @@ const Skill: profile.component.func = (props) => {
       );
     });
     return (
-      <div key={skill_list.category}>
+      <section key={skill_list.category}>
         {categoryTitle}
         <ul>{skillTag}</ul>
-      </div>
+      </section>
     );
   });
   return (

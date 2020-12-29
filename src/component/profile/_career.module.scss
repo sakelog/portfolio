@@ -1,0 +1,40 @@
+@use '../../styles/Foundation/variables' as *;
+@use '../../styles/Foundation/mixin' as *;
+
+.item {
+  margin-bottom: 2rem;
+  .title {
+    font-weight: bold;
+    margin: 0.4rem auto;
+  }
+  @include mq(md) {
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    .ymd {
+      flex-grow: 1;
+      text-align: right;
+      padding: 0 0.6rem;
+      color: $gray;
+    }
+    section {
+      width: 70%;
+      border-left: 1px dashed $gray;
+      padding: 0 0.6rem;
+      position: relative;
+      .title {
+        margin: 0;
+      }
+      &:before {
+        content: '';
+        background: $theme-color;
+        width: 0.6rem;
+        height: 0.6rem;
+        position: absolute;
+        top: 0.4rem;
+        left: -0.4rem;
+        border-radius: 100%;
+      }
+    }
+  }
+}

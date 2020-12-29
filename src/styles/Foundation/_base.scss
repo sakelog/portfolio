@@ -3,4 +3,7 @@
 html {
   font-family: $font-default;
   color: $text-color-default;
+  body {
+    padding: 0.4rem;
+  }
 }
