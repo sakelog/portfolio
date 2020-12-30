@@ -3,27 +3,27 @@ import { getAllComponentsJson } from '../lib/getComponentJson';
 
 import SiteMeta from '../config';
 
+import Layout from '../component/layout';
 import Profile from '../component/profile/profile';
 import Works from '../component/works/works';
-import Layout from '../component/layout';
 
 const PROFILE_DIRECTORY = 'profile';
 const WORKS_DIRECTORY = 'works';
 
 const TopPage = ({ profileComponents, worksComponents, fetchDate }) => {
   return (
-    <>
-      <Layout>
-        <Profile md={profileComponents.md} json={profileComponents.json} />
-        <Works
-          github={worksComponents.github}
-          works={worksComponents.works}
-          date={fetchDate}
-        />
-      </Layout>
-    </>
+    <Layout>
+      <Profile md={profileComponents.md} json={profileComponents.json} />
+      <Works
+        github={worksComponents.github}
+        works={worksComponents.works}
+        date={fetchDate}
+      />
+    </Layout>
   );
 };
+
+export default TopPage;
 
 export async function getStaticProps() {
   const profileComponentsMD = getAllProfileComponentsMD();
@@ -51,5 +51,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-export default TopPage;
