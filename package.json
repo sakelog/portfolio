@@ -8,14 +8,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "date-fns": "^2.16.1",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "next": "^10.0.3",
+    "next-on-netlify": "^2.6.3",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
