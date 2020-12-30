@@ -1,5 +1,5 @@
 import { Link, Element } from 'react-scroll';
-import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
+import { FiChevronUp } from 'react-icons/fi';
 
 import styles from './contactform.module.scss';
 
@@ -8,39 +8,12 @@ const ContactForm = () => {
     <Element name="contact">
       <section className={styles.root}>
         <h2>お問い合わせ</h2>
-        <form name="portfolio-contact" method="POST" data-netlify="true">
-          <div className={styles.form_wrapper}>
-            <div className={styles.form_item}>
-              <label>
-                <span>お名前</span>
-                <div className={styles.input_control}>
-                  <input type="text" name="name" placeholder="サンプル　花子" />
-                </div>
-              </label>
-            </div>
-            <div className={styles.form_item}>
-              <label>
-                <span>メールアドレス</span>
-                <div className={styles.input_control}>
-                  <input
-                    type="email"
-                    name="mail"
-                    placeholder="hogehoge@sample.com"
-                  />
-                </div>
-              </label>
-            </div>
-            <div className={styles.form_item}>
-              <label>
-                <span>本文</span>
-                <div className={styles.input_control}>
-                  <textarea name="message" rows={8} />
-                </div>
-              </label>
-            </div>
-            <button type="submit">送信</button>
-          </div>
-        </form>
+        <a
+          href="https://tayori.com/form/bc8c9ed063615c7b537921ddb3cf12bfe0b0a701"
+          className={styles.button}
+        >
+          お問い合わせはこちらのフォームから
+        </a>
         <span className="c__scrollButton">
           <span className="c__scrollButton--toUp">
             <Link

@@ -3,60 +3,7 @@
 
 .root {
   position: relative;
-  .form_wrapper {
-    max-width: 760px;
-    margin: auto;
-    .form_item {
-      display: block;
-      padding: 0.6rem 0;
-      label {
-        display: flex;
-        flex-direction: column;
-        span {
-          background: $theme-color;
-          color: #ffffff;
-          margin-bottom: 0.4rem;
-          padding: 10px;
-        }
-        input,
-        textarea {
-          border: 1px solid $gray;
-          border-radius: 4px;
-          padding: 10px;
-          width: 100%;
-        }
-        textarea {
-          resize: vertical;
-        }
-      }
-      @include mq(md) {
-        padding: 0;
-        border: 1px solid $gray-dark;
-        margin: 0;
-        label {
-          flex-direction: row;
-          align-items: stretch;
-          margin: 0;
-          span {
-            width: 200px;
-            margin: 0;
-            border-right: 1px solid $gray-dark;
-          }
-          .input_control {
-            padding: 10px;
-            flex-grow: 1;
-          }
-        }
-        &:first-of-type {
-          border-bottom: none;
-        }
-        &:last-of-type {
-          border-top: none;
-        }
-      }
-    }
-  }
-  button {
+  .button {
     background: $theme-color;
     color: #ffffff;
     border-radius: 4px;
