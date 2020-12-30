@@ -2,7 +2,7 @@
 @use '../../styles/Foundation/mixin' as *;
 
 .root {
-  padding: 1rem;
+  position: relative;
   .form_wrapper {
     max-width: 760px;
     margin: auto;

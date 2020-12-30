@@ -3,8 +3,10 @@
 
 .root {
   @include mq(md) {
-    border-right: 1px solid $theme-color;
-    padding-right: 1rem;
+    @media (orientation: landscape) {
+      border-right: 1px solid $theme-color;
+      padding-right: 1rem;
+    }
   }
   .socialLink {
     margin: 0.6rem auto;
@@ -21,6 +23,7 @@
   @include mq(xs) {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 50px;
+    width: 50px;
+    height: 50px;
   }
 }

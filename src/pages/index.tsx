@@ -3,28 +3,25 @@ import { getAllComponentsJson } from '../lib/getComponentJson';
 
 import SiteMeta from '../config';
 
-import Header from '../component/header';
-import HeroHeader from '../component/heroheader/heroheader';
 import Profile from '../component/profile/profile';
 import Works from '../component/works/works';
-import ContactForm from '../component/contactform/contactform';
+import Layout from '../component/layout';
 
 const PROFILE_DIRECTORY = 'profile';
 const WORKS_DIRECTORY = 'works';
 
 const TopPage = ({ profileComponents, worksComponents, fetchDate }) => {
   return (
-    <div>
-      <Header />
-      <HeroHeader />
-      <Profile md={profileComponents.md} json={profileComponents.json} />
-      <Works
-        github={worksComponents.github}
-        works={worksComponents.works}
-        date={fetchDate}
-      />
-      <ContactForm />
-    </div>
+    <>
+      <Layout>
+        <Profile md={profileComponents.md} json={profileComponents.json} />
+        <Works
+          github={worksComponents.github}
+          works={worksComponents.works}
+          date={fetchDate}
+        />
+      </Layout>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
-import styles from './_navItems.module.scss';
 import { FiSmile, FiFolder, FiMail } from 'react-icons/fi';
+import { Link } from 'react-scroll';
 
+import styles from './_navItems.module.scss';
 import SiteMeta from '../../config';
 
 const NavItems = () => {
@@ -10,28 +11,46 @@ const NavItems = () => {
       <p>{SiteMeta.description}</p>
       <ul className={styles.menuItems}>
         <li>
-          <a href="#profile">
+          <Link
+            activeClass="active"
+            to="profile"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <span className={styles.icon}>
               <FiSmile />
             </span>
             <span>PROFILE</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#works">
+          <Link
+            activeClass="active"
+            to="works"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <span className={styles.icon}>
               <FiFolder />
             </span>
             <span>WORKS</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact">
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <span className={styles.icon}>
               <FiMail />
             </span>
             <span>CONTACT</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FiChevronsDown } from 'react-icons/fi';
+import { Link } from 'react-scroll';
 
 import SocialLink from './_socialLink';
 import NavItems from './_navItems';
@@ -25,11 +26,17 @@ const HeroHeader = () => {
             <SocialLink />
             <NavItems />
           </div>
-          <a href="#profile">
+          <Link
+            activeClass="active"
+            to="profile"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <span className={styles.bottomButton}>
               <FiChevronsDown />
             </span>
-          </a>
+          </Link>
         </section>
       </nav>
       <XSNav />

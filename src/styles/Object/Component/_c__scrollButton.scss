@@ -1,0 +1,21 @@
+@use '../../Foundation/variables' as *;
+
+.c__scrollButton {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: flex;
+  .c__scrollButton--toUp,
+  .c__scrollButton--toDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+    margin-left: 0.2rem;
+    a {
+      color: $theme-color;
+    }
+  }
+}

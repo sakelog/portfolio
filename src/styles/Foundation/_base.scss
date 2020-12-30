@@ -4,10 +4,7 @@
 html {
   font-family: $font-default;
   color: $text-color-default;
-  font-size: 4vw;
-  @include mq(sm) {
-    font-size: 1.4vw;
-  }
+  font-size: 62.5%;
   a {
     color: $theme-color;
     font-weight: bold;
@@ -17,10 +14,12 @@ html {
     }
   }
   body {
+    font-size: 1.6rem;
+    line-height: 2;
     overflow-x: hidden;
     h2 {
       margin: 2rem auto 1rem;
-      font-size: 2.4rem;
+      font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));
       color: $theme-color;
       border-bottom: 2px double $theme-color;
     }
@@ -29,7 +28,7 @@ html {
       display: flex;
       align-items: center;
       font-weight: bold;
-      font-size: 2rem;
+      font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));
       color: $gray-dark;
       margin: 2rem auto 1rem;
       &:before,

@@ -1,3 +1,6 @@
+import { Link, Element } from 'react-scroll';
+import { FiChevronDown } from 'react-icons/fi';
+
 import AboutMe from './_aboutme';
 import Qualification from './_qualification';
 import Career from './_career';
@@ -28,13 +31,28 @@ const Profile: profile.container.func = (props) => {
   const SkillComponentJson: Myjson = searchComponentBySlug(props.json, SKILL);
 
   return (
-    <article className={styles.root}>
-      <h2 id="profile">自己紹介</h2>
-      <AboutMe json={AboutMeComponentJson} />
-      <Career json={CareerComponentJson} />
-      <Skill json={SkillComponentJson} />
-      <Qualification json={QualificationComponentJson} />
-    </article>
+    <Element name="profile">
+      <article className={styles.root}>
+        <h2>自己紹介</h2>
+        <AboutMe json={AboutMeComponentJson} />
+        <Career json={CareerComponentJson} />
+        <Skill json={SkillComponentJson} />
+        <Qualification json={QualificationComponentJson} />
+        <span className="c__scrollButton">
+          <span className="c__scrollButton--toDown">
+            <Link
+              activeClass="active"
+              to="works"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <FiChevronDown />
+            </Link>
+          </span>
+        </span>
+      </article>
+    </Element>
   );
 };
 

@@ -10,21 +10,21 @@ $star-color: #e6b422;
   padding: 1rem;
   border-radius: 4px;
   .category {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     margin-bottom: 0.6rem;
   }
   li {
     display: flex;
     flex-direction: column;
     margin-bottom: 0.4rem;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     .skill {
       font-weight: bold;
     }
     @include mq(md) {
       flex-direction: row;
       .skill {
-        width: 20rem;
+        width: 30rem;
       }
     }
   }

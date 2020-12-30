@@ -1,17 +1,15 @@
 import Head from 'next/head';
+import SiteMeta from '../config';
 
-const Header = () => {
+const CustomHead = () => {
   return (
     <Head>
-      <title>porfolio</title>
+      <title>{SiteMeta.title}</title>
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width"
       />
-      <meta
-        name="description"
-        content="システムエンジニアsakeのポートフォリオ"
-      />
+      <meta name="description" content={SiteMeta.description} />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         rel="stylesheet"
@@ -29,4 +27,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default CustomHead;

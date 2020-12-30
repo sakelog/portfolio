@@ -19,6 +19,7 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
     "react-markdown": "^5.0.3",
+    "react-scroll": "^1.8.1",
     "reset-css-complete": "^2.0.0",
     "sass": "^1.30.0"
   },
