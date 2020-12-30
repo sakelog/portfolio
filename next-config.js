@@ -1,11 +1,10 @@
-const path = require('path');
-const withPWA = require('next-pwa');
+import { join } from 'path';
+const withOffline = require('next-offline');
 
-module.exports = withPWA({
+const nextConfig = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [join(__dirname, 'styles')],
   },
-  pwa: {
-    dest: 'public',
-  },
-});
+};
+
+module.exports = withOffline(nextConfig);

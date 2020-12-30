@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "next": "^10.0.3",
+    "next-offline": "^5.0.3",
     "next-pwa": "^5.0.1",
     "path": "^0.12.7",
     "react": "^17.0.1",

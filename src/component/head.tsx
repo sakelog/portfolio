@@ -30,7 +30,6 @@ const CustomHead = () => {
       <meta property="og:image" content={ogImage} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content={SiteMeta.description} />
-
       <meta name="theme-color" content="#3675a9" />
       <meta
         name="msapplication-square70x70logo"
