@@ -1,7 +1,7 @@
-export function searchComponentBySlug(Components, slug: string) {
+export function searchComponentBySlug(components: any[], slug: string) {
   let targetComponent;
 
-  Components.map((component) => {
+  components.map((component) => {
     if (component.slug == slug) {
       targetComponent = component;
     }

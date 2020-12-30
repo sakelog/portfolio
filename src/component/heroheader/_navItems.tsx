@@ -18,7 +18,7 @@ const NavItems = () => {
           </a>
         </li>
         <li>
-          <a href="#work">
+          <a href="#works">
             <span className={styles.icon}>
               <FiFolder />
             </span>

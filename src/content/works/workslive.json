@@ -1,0 +1,14 @@
+{
+  "workslive_list": [
+    { "title": "sakelog",
+      "url": "https://sake-log.website/",
+      "screenshot": "/img/screenshot/screenshot_sakelog.png",
+      "description": "Gatsby.jsで作成した技術ブログ"
+    },
+    { "title": "Simple Countdown Timer",
+      "url": "https://sakelog.github.io/nextjs_timer/",
+      "screenshot": "/img/screenshot/screenshot_simplecountdowntimer.png",
+      "description": "Next.jsとReduxで作成したカウントダウンタイマー"
+    }
+  ]
+}

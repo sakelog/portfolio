@@ -1,26 +1,16 @@
 namespace profile {
-  declare type md = {
-    slug: string;
-    data?: JSON;
-    content? :string;
-  }
-  declare type json = {
-    slug: string;
-    content? :JSON;
-  }
-
   namespace container {
     declare type props = {
-      md: md;
-      json: json;
+      md: Mymd[];
+      json: Myjson[];
     }
     declare type func = (props:props) => JSX.Element
   }
 
   namespace component {
     declare type props = {
-      md?: md;
-      json?: json;
+      md?: Mymd;
+      json?: Myjson;
     }
     declare type func = (props:props) => JSX.Element
   }
