@@ -20,6 +20,6 @@
   ],
   "theme_color": "#3675a9",
   "background_color": "#FFFFFF",
-  "start_url": "https://portfolio-rose-three.vercel.app/",
+  "start_url": "/",
   "display": "standalone"
 }
