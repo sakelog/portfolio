@@ -43,7 +43,7 @@ $star-color: #e6b422;
 }
 
 .star {
-  color: $gray;
+  color: $gray-dark;
   &.star_1 {
     > :nth-child(1) {
       color: $star-color;

@@ -17,6 +17,7 @@ html {
     font-size: 1.6rem;
     line-height: 2;
     overflow-x: hidden;
+    overflow-y: auto;
     h2 {
       margin: 2rem auto 1rem;
       font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));

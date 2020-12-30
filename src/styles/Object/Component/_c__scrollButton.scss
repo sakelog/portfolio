@@ -2,7 +2,7 @@
 
 .c__scrollButton {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 1rem;
   display: flex;
   .c__scrollButton--toUp,
@@ -10,9 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2rem;
-    width: 2rem;
-    font-size: 2rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
     margin-left: 0.2rem;
     a {
       color: $theme-color;
