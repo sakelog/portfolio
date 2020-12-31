@@ -17,33 +17,24 @@
   margin: 0;
   padding: 0;
   position: relative;
+  background: $gray;
   @include mq(xs) {
     display: none;
-  }
-  .bgWrap {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
   }
   .navContent {
     height: 100vh;
     width: 100vw;
-    padding: 2rem;
+    padding: 0;
     z-index: 999;
     @include mq(md) {
       padding: 4rem;
     }
     > div {
-      border: 1px solid $theme-color;
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
-      padding: 1rem;
+      padding: 0;
       background: #ffffff;
       overflow: hidden;
       position: relative;
@@ -57,13 +48,13 @@
   }
   .bottomButton {
     position: absolute;
-    left: calc(50% - 30px);
+    left: calc(50% - 3rem);
     bottom: 2.5rem;
-    background: $gray-dark;
-    color: #ffffff;
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
+    background: #ffffff;
+    color: $gray-darker;
+    width: 6rem;
+    height: 6rem;
+    font-size: 4rem;
     border-radius: 100%;
     display: flex;
     justify-content: center;

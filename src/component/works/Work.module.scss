@@ -33,6 +33,11 @@
       a {
         display: block;
         font-size: 1.8rem;
+        &:hover {
+          img {
+            opacity: 0.4;
+          }
+        }
       }
       .description {
         font-size: 1.4rem;

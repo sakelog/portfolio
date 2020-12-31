@@ -1,7 +1,7 @@
 export default {
   title: 'sake portfolio',
   author: 'sake',
-  description: 'システムエンジニア sakeのポートフォリオサイトです',
+  description: 'システムエンジニアsakeのポートフォリオサイトです',
   url: 'https://sakeengineer.com/',
   social: {
     twitter: 'sake_engineer',

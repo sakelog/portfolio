@@ -12,15 +12,6 @@ const HeroHeader = () => {
   return (
     <>
       <nav className={styles.heroheader}>
-        <div className={styles.bgWrap}>
-          <Image
-            alt="HeroHeader"
-            src="/img/heroheader.png"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
         <section className={styles.navContent}>
           <div>
             <SocialLink />

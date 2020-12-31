@@ -2,12 +2,22 @@
 @use '../../styles/Foundation/mixin' as *;
 
 .root {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid $theme-color;
+  background: $theme-color;
+  padding: 0.6rem 1rem;
   @include mq(sm) {
     display: none;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bottom {
+    text-align: right;
+    a {
+      color: #ffffff;
+      font-size: 3rem;
+      margin: auto 1rem;
+    }
   }
 }

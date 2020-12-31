@@ -2,11 +2,15 @@
 @use '../../styles/Foundation/mixin' as *;
 
 .root {
+  padding: 2rem 1rem;
   @include mq(md) {
     @media (orientation: landscape) {
       border-right: 1px solid $theme-color;
-      padding-right: 1rem;
     }
+  }
+  .author {
+    font-weight: bold;
+    font-size: 1.8rem;
   }
   .socialLink {
     margin: 0.6rem auto;
@@ -16,7 +20,6 @@
   }
 }
 .profileImage {
-  border: 1px solid $gray;
   display: inline-block;
   border-radius: 100%;
   background: #ffffff;

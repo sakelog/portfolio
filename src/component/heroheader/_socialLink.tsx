@@ -16,7 +16,7 @@ const SocialLink = () => {
           loading="lazy"
         />
       </div>
-      <p>sake</p>
+      <p className={styles.author}>{SiteMeta.author}</p>
       <ul className={styles.socialLink}>
         <li>
           Twitter:

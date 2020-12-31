@@ -4,11 +4,13 @@
 .root {
   margin-top: 1rem;
   border-top: 1px solid $theme-color;
+  background: $theme-color;
   position: relative;
+  color: #ffffff;
+  flex-grow: 1;
+  padding: 2rem 1rem;
   @include mq(md) {
     @media (orientation: landscape) {
-      padding-left: 1rem;
-      flex-grow: 1;
       margin-top: 0;
       border-top: 0;
     }
@@ -17,13 +19,14 @@
     margin: 0.6rem auto;
     display: flex;
     position: relative;
-    background: #ffffff;
+    background: $theme-color;
     li {
       margin: auto 1.2rem;
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: #ffffff;
       }
       .icon {
         font-size: 3rem;
@@ -34,8 +37,10 @@
 .siteTitle {
   margin: 1rem auto;
   font-family: $font-logo;
-  font-size: 3rem;
+  font-size: 10rem;
+  color: #ffffff;
   @include mq(xs) {
     margin: 0;
+    font-size: 3rem;
   }
 }
