@@ -13,13 +13,14 @@
       align-items: stretch;
     }
     li {
+      border: 2px solid $theme-color;
+      padding: 0.2rem;
+      border-radius: 4px;
       margin-bottom: 2rem;
       @include mq(md) {
         width: 32%;
         margin: 0.6rem 0.4rem;
         padding: 0.6rem;
-        border: 2px solid $theme-color;
-        border-radius: 4px;
       }
       .create_date {
         color: $gray-dark;
