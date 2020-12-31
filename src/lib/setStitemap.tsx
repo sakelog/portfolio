@@ -5,9 +5,9 @@ import SiteMeta from '../config';
 export function setSiteMap(fetchDate: Date) {
   let SitemapString: string;
 
-  SitemapString = '<?xml version=”1.0″ encoding=”UTF-8″?>';
+  SitemapString = '<?xml version="1.0" encoding="UTF-8" ?>';
   SitemapString +=
-    '<urlset xmlns=”http://www.sitemaps.org/schemas/sitemap/0.9″>';
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
   SitemapString += '<url><loc>';
   SitemapString += SiteMeta.url;
   SitemapString += '</loc>';
