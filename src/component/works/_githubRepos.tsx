@@ -29,7 +29,7 @@ const GithubRepos: works.component_github.func = (props) => {
             {updated_at}
           </span>
         </p>
-        <a href={repo.url}>{repo.name}</a>
+        <a href={repo.html_url}>{repo.name}</a>
         <span className={styles.description}>{repo.description}</span>
         <span className={styles.otherInfo}>
           使用言語：<span className={styles.tag}>{repo.language}</span>
