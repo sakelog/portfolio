@@ -19,23 +19,21 @@ const SocialLink = () => {
       <p className={styles.author}>{SiteMeta.author}</p>
       <ul className={styles.socialLink}>
         <li>
-          Twitter:
           <a
             href={'https://twitter.com/' + SiteMeta.social.twitter}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {'@' + SiteMeta.social.twitter}
+            Twitter: {'@' + SiteMeta.social.twitter}
           </a>
         </li>
         <li>
-          Github:
           <a
             href={'https://github.com/' + SiteMeta.social.github}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {SiteMeta.social.github}
+            Github: {SiteMeta.social.github}
           </a>
         </li>
       </ul>
