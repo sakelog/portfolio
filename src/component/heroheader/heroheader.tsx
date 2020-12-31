@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import React from 'react';
 import { FiChevronsDown } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
@@ -9,9 +9,13 @@ import XSNav from './_xsNav';
 import styles from './heroheader.module.scss';
 
 const HeroHeader = () => {
+  const [innerHeight, setInnerHeight] = React.useState(400);
+  React.useEffect(() => {
+    setInnerHeight(window.innerHeight);
+  });
   return (
     <>
-      <nav className={styles.heroheader}>
+      <nav className={styles.heroheader} style={{ height: innerHeight }}>
         <section className={styles.navContent}>
           <div>
             <SocialLink />
