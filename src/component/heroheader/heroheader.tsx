@@ -17,7 +17,7 @@ const HeroHeader = () => {
 
   React.useEffect(() => {
     handleInnerHeight();
-    window.addEventListener('orientationchange', () => {
+    window.addEventListener('orientationchange resize', () => {
       handleInnerHeight();
     });
   });
