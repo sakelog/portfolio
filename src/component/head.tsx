@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import SiteMeta from '../config';
 
+const GTM_ID = process.env.GTM_ID;
+
 const CustomHead = () => {
   const ogImage = '/img/ogimage.png';
   return (
@@ -24,6 +26,7 @@ const CustomHead = () => {
           'https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet'
         }
       />
+
       <meta property="og:title" content={SiteMeta.title} />
       <meta property="og:description" content={SiteMeta.description} />
       <meta property="og:type" content="website" />
