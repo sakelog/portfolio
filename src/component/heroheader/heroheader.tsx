@@ -1,7 +1,6 @@
 import React from 'react';
 import { FiChevronsDown } from 'react-icons/fi';
 import { Link } from 'react-scroll';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import SocialLink from './_socialLink';
 import NavItems from './_navItems';
