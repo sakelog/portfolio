@@ -67,10 +67,8 @@ const Skill: profile.component.func = (props) => {
     });
     return (
       <section key={skill_list.category} className={styles.skill_item}>
-        <ul>
-          {categoryTitle}
-          {skillTag}
-        </ul>
+        {categoryTitle}
+        <ul>{skillTag}</ul>
       </section>
     );
   });
