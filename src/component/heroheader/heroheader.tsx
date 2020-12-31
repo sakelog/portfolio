@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiChevronsDown } from 'react-icons/fi';
 import { Link } from 'react-scroll';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import SocialLink from './_socialLink';
 import NavItems from './_navItems';
@@ -10,9 +11,18 @@ import styles from './heroheader.module.scss';
 
 const HeroHeader = () => {
   const [innerHeight, setInnerHeight] = React.useState(400);
-  React.useEffect(() => {
+
+  function handleInnerHeight() {
     setInnerHeight(window.innerHeight);
+  }
+
+  React.useEffect(() => {
+    handleInnerHeight();
+    window.addEventListener('orientationchange', () => {
+      handleInnerHeight();
+    });
   });
+
   return (
     <>
       <nav className={styles.heroheader} style={{ height: innerHeight }}>
