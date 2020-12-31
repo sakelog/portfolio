@@ -23,6 +23,7 @@ $star-color: #e6b422;
     }
     @include mq(md) {
       flex-direction: row;
+      flex-wrap: wrap;
       .skill {
         width: 30rem;
       }
