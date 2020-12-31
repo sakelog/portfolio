@@ -1,6 +1,8 @@
 import { Link, Element } from 'react-scroll';
 import { FiChevronUp } from 'react-icons/fi';
+import { FaBoxOpen, FaTwitter } from 'react-icons/fa';
 
+import SiteMeta from '../../config';
 import styles from './contactform.module.scss';
 
 const ContactForm = () => {
@@ -10,10 +12,38 @@ const ContactForm = () => {
         <h2>お問い合わせ</h2>
         <a
           href="https://tayori.com/form/bc8c9ed063615c7b537921ddb3cf12bfe0b0a701"
-          className={styles.button}
+          className="c__button"
         >
           お問い合わせはこちらのフォームから
         </a>
+        <ul className={styles.icons}>
+          <li>
+            <a
+              href="https://peing.net/ja/sake_engineer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="c__iconLink"
+            >
+              <span className="c__iconLink__icon">
+                <FaBoxOpen />
+              </span>
+              質問箱
+            </a>
+          </li>
+          <li>
+            <a
+              href={'https://twitter.com/' + SiteMeta.social.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="c__iconLink"
+            >
+              <span className="c__iconLink__icon">
+                <FaTwitter />
+              </span>
+              Twitter
+            </a>
+          </li>
+        </ul>
         <span className="c__scrollButton">
           <span className="c__scrollButton--toUp">
             <Link

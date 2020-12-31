@@ -1,0 +1,14 @@
+@use '../../Foundation/variables' as *;
+
+.c__button {
+  background: $theme-color;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 1rem 0;
+  display: inline-block;
+  width: auto;
+  &:hover {
+    background: $gray-dark;
+  }
+}

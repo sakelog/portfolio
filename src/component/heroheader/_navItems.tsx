@@ -17,8 +17,9 @@ const NavItems = () => {
             spy={true}
             smooth={true}
             duration={500}
+            className="c__iconLink"
           >
-            <span className={styles.icon}>
+            <span className="c__iconLink__icon">
               <FiSmile />
             </span>
             <span>PROFILE</span>
@@ -31,8 +32,9 @@ const NavItems = () => {
             spy={true}
             smooth={true}
             duration={500}
+            className="c__iconLink"
           >
-            <span className={styles.icon}>
+            <span className="c__iconLink__icon">
               <FiFolder />
             </span>
             <span>WORKS</span>
@@ -45,8 +47,9 @@ const NavItems = () => {
             spy={true}
             smooth={true}
             duration={500}
+            className="c__iconLink"
           >
-            <span className={styles.icon}>
+            <span className="c__iconLink__icon">
               <FiMail />
             </span>
             <span>CONTACT</span>
