@@ -1,5 +1,6 @@
 import { getAllProfileComponentsMD } from '../lib/getProfileComponentMD';
 import { getAllComponentsJson } from '../lib/getComponentJson';
+import { setSiteMap } from '../lib/setStitemap';
 
 import SiteMeta from '../config';
 
@@ -35,7 +36,10 @@ export async function getStaticProps() {
 
   const works = getAllComponentsJson(WORKS_DIRECTORY);
 
-  const fetchDate = new Date().toString();
+  const fetchDate = new Date();
+  const fetchDate_string = fetchDate.toString();
+
+  setSiteMap(fetchDate);
 
   return {
     props: {
@@ -47,7 +51,7 @@ export async function getStaticProps() {
         works: works,
         github: githubReposJson,
       },
-      fetchDate,
+      fetchDate: fetchDate_string,
     },
   };
 }
