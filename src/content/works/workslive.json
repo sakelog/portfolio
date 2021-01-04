@@ -9,6 +9,11 @@
       "url": "https://sakelog.github.io/nextjs_timer/",
       "screenshot": "/img/screenshot/screenshot_simplecountdowntimer.png",
       "description": "Next.jsとReduxで作成したカウントダウンタイマー"
+    },
+    { "title": "永遠の17才",
+      "url": "https://sakelog.github.io/17years-old/",
+      "screenshot": "/img/screenshot/screenshot_17years_old.png",
+      "description": "誕生日を入力すると年令を17才◯ヶ月に換算して表示します"
     }
   ]
 }
