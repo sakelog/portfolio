@@ -60,7 +60,7 @@
     &:hover {
       animation: button_animation 1s ease-in-out infinite alternate;
     }
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: 400px) {
       display: none;
     }
   }

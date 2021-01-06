@@ -29,12 +29,18 @@
   }
 }
 .siteTitle {
-  margin: 1rem auto;
   font-family: $font-logo;
-  font-size: 10rem;
+  font-size: 6rem;
   color: #ffffff;
   @include mq(xs) {
     margin: 0;
     font-size: 3rem;
   }
+}
+.description {
+  font-size: 2.6rem;
+}
+.callToAction {
+  margin: 1rem 2rem;
+  font-size: 2rem;
 }

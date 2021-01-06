@@ -12,7 +12,7 @@ const ContactForm = () => {
         <h2>お問い合わせ</h2>
         <a
           href="https://tayori.com/form/bc8c9ed063615c7b537921ddb3cf12bfe0b0a701"
-          className="c__button"
+          className="c__button--primary"
         >
           お問い合わせはこちらのフォームから
         </a>

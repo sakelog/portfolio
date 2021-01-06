@@ -1,7 +1,6 @@
 @use '../../Foundation/variables' as *;
 
 .c__button {
-  background: $theme-color;
   color: #ffffff;
   border-radius: 4px;
   padding: 10px;
@@ -10,5 +9,18 @@
   width: auto;
   &:hover {
     background: $gray-dark;
+    text-decoration: none;
+  }
+}
+.c__button--primary {
+  @extend .c__button;
+  background: $theme-color;
+}
+.c__button--invert {
+  @extend .c__button;
+  background: #ffffff;
+  color: $theme-color;
+  &:hover {
+    color: #ffffff;
   }
 }

@@ -8,7 +8,15 @@ const NavItems = () => {
   return (
     <div className={styles.root}>
       <h1 className={styles.siteTitle}>{SiteMeta.title}</h1>
-      <p>{SiteMeta.description}</p>
+      <p className={styles.description}>{SiteMeta.description}</p>
+      <p className={styles.callToAction}>
+        <a
+          href="https://tayori.com/form/bc8c9ed063615c7b537921ddb3cf12bfe0b0a701"
+          className="c__button--invert"
+        >
+          お問い合わせはこちらのフォームから
+        </a>
+      </p>
       <ul className={styles.menuItems}>
         <li>
           <Link
@@ -22,7 +30,7 @@ const NavItems = () => {
             <span className="c__iconLink__icon">
               <FiSmile />
             </span>
-            <span>PROFILE</span>
+            <span>プロフィール</span>
           </Link>
         </li>
         <li>
@@ -37,7 +45,7 @@ const NavItems = () => {
             <span className="c__iconLink__icon">
               <FiFolder />
             </span>
-            <span>WORKS</span>
+            <span>制作物</span>
           </Link>
         </li>
         <li>
@@ -52,7 +60,7 @@ const NavItems = () => {
             <span className="c__iconLink__icon">
               <FiMail />
             </span>
-            <span>CONTACT</span>
+            <span>お問い合わせ</span>
           </Link>
         </li>
       </ul>
