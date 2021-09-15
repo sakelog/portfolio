@@ -1,63 +1,53 @@
-namespace profile {
-  namespace container {
-    declare type props = {
-      md: Mymd[];
-      json: Myjson[];
+declare namespace Profile {
+  
+  declare namespace AboutMe  {
+    declare type Item = {
+      id: string;
+      title: string;
+      detail: string;
     }
-    declare type func = (props:props) => JSX.Element
+    declare type Items = Item[];
+  }
+  declare namespace Career {
+    declare type Item = {
+      id: string;
+      title: string;
+      startYmd: string;
+      endYmd: string | null;
+      detail: string;
+    }
+    declare type Items = Item[];
   }
 
-  namespace component {
-    declare type props = {
-      md?: Mymd;
-      json?: Myjson;
+  declare namespace Skill {
+    declare type Skill = {
+      id: string;
+      name: string;
+      star: number;
     }
-    declare type func = (props:props) => JSX.Element
+    declare type Collection = {
+      id: string;
+      category: string;
+      skills: Skill[]
+    }
+    declare type Collections = Collection[]
   }
-  declare interface aboutme_jsonContent extends JSON {
-    aboutme_list?: [
-      {
-        title: string;
-        content: string;
+  declare namespace Qualification {
+    declare type Badge = {
+      id: string;
+      title: string;
+      height: number;
+      width: number;
+      image: {
+        url: string;
       }
-    ]
-  }
-
-  declare interface qualification_jsonContent extends JSON {
-    qualifications?: [
-      {
-        qualification: string;
-      }
-    ],
-    badges?: [
-      {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-      }
-    ]
-  }
-  declare interface career_jsonContent extends JSON {
-    career_list?: [
-      {
-        ymd: string;
-        title: string;
-        detail: string;
-      }
-    ]
-  }
-  declare interface skill_jsonContent extends JSON {
-    skill_lists?: [
-      {
-        category: string;
-        skills: [
-          {
-            skill: string;
-            star: number;
-          }
-        ]
-      }
-    ]
+    } | null;
+    declare type Item = {
+      id: string;
+      name: string;
+      yymm: string | null;
+      badge: Badge | null;
+    }
+    declare type Items = Qualification[];
   }
 }
