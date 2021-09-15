@@ -1,12 +1,13 @@
 // Foundation--------------------------------
-@use './Foundation/reset';
 @use './Foundation/base';
-
-// Layout
-@use './Layout/l__container';
-
+// Layout------------------------------------
 // Object------------------------------------
 // Component
-@use './Object/Component/c__button';
-@use './Object/Component/c__scrollButton';
-@use './Object/Component/c__iconLink';
+// Project
+// Utility
+@use './Object/Utility/u__header';
+
+//Tailwind-----------------------------------
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,50 +1,9 @@
-@use './variables' as *;
-@use './mixin' as *;
-
-html {
-  font-family: $font-default;
-  color: $text-color-default;
-  font-size: 62.5%;
-  a {
-    color: $theme-color;
-    font-weight: bold;
-    padding-bottom: 0.2rem;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  body {
-    font-size: 1.6rem;
-    line-height: 2;
-    overflow-x: hidden;
-    overflow-y: auto;
-    h2 {
-      margin: 2rem auto 1rem;
-      font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));
-      color: $theme-color;
-      border-bottom: 2px double $theme-color;
-    }
-
-    h3 {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));
-      color: $gray-dark;
-      margin: 2rem auto 1rem;
-      &:before,
-      &:after {
-        content: '';
-        height: 1px;
-        flex-grow: 1;
-        background: $theme-color;
-      }
-      &:before {
-        margin-right: 1rem;
-      }
-      &:after {
-        margin-left: 1rem;
-      }
+@layer base {
+  html {
+    @apply font-sans text-gray-800;
+    scroll-behavior: smooth;
+    a {
+      @apply text-theme font-medium pb-1 hover:underline;
     }
   }
 }
