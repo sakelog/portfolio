@@ -5,7 +5,6 @@ import Document, {
   NextScript,
 } from 'next/document';
 
-import siteMeta from '@components/config';
 import GTMScript from '@components/GTM/script';
 import GTMNoScript from '@components/GTM/noScript';
 
