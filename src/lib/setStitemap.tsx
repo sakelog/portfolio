@@ -1,26 +1,31 @@
 import fs from 'fs';
 import { format } from 'date-fns';
-import SiteMeta from '../config';
+import siteMeta from '@components/config';
 
 export function setSiteMap(fetchDate: Date) {
-  let SitemapString: string;
+  let sitemapString: string;
 
-  SitemapString = '<?xml version="1.0" encoding="UTF-8" ?>';
-  SitemapString +=
+  sitemapString = '<?xml version="1.0" encoding="UTF-8" ?>';
+  sitemapString +=
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-  SitemapString += '<url><loc>';
-  SitemapString += SiteMeta.url;
-  SitemapString += '</loc>';
-  SitemapString += '<lastmod>';
-  SitemapString += format(fetchDate, 'yyyy-MM-dd');
-  SitemapString += 'T';
-  SitemapString += format(fetchDate, 'hh:mmxxx');
-  SitemapString += '</lastmod>';
-  SitemapString += '<changefreq>monthly</changefreq>';
-  SitemapString += '<priority>1.0</priority>';
-  SitemapString += '</url></urlset>';
+  sitemapString += '<url><loc>';
+  sitemapString += siteMeta.url;
+  sitemapString += '</loc>';
+  sitemapString += '<lastmod>';
+  sitemapString += format(fetchDate, 'yyyy-MM-dd');
+  sitemapString += 'T';
+  sitemapString += format(fetchDate, 'hh:mmxxx');
+  sitemapString += '</lastmod>';
+  sitemapString += '<changefreq>monthly</changefreq>';
+  sitemapString += '<priority>1.0</priority>';
+  sitemapString += '</url></urlset>';
 
-  fs.writeFile('public/sitemap.xml', SitemapString, 'utf8', () => {
-    console.log('Sitemap.xml saved');
-  });
+  fs.writeFile(
+    'public/sitemap.xml',
+    sitemapString,
+    'utf8',
+    () => {
+      console.log('Sitemap.xml saved');
+    }
+  );
 }
