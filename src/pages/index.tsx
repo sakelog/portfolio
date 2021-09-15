@@ -1,57 +1,109 @@
-import { getAllProfileComponentsMD } from '../lib/getProfileComponentMD';
-import { getAllComponentsJson } from '../lib/getComponentJson';
+import type { NextPage, GetStaticProps } from 'next';
+import Head from 'next/head';
+
 import { setSiteMap } from '../lib/setStitemap';
 
-import SiteMeta from '../config';
+import {
+  aboutMe,
+  carreer,
+  skill,
+  qualification,
+  release,
+} from '@lib/graphCMS/getContent';
+import { repo } from '@lib/github/getContent';
 
-import Layout from '../component/layout';
-import Profile from '../component/profile/profile';
-import Works from '../component/works/works';
+import siteMeta from '@components/config';
 
-const PROFILE_DIRECTORY = 'profile';
-const WORKS_DIRECTORY = 'works';
+import Layout from '@components/layout';
+import AboutMeComponent from '@components/profile/_aboutme';
+import CarrerComponent from '@components/profile/_career';
+import SkillComponent from '@components/profile/_skill';
+import QualificationComponent from '@components/profile/_qualification';
+import ReleaseComponent from '@components/works/_release';
+import GithubRepoComponent from '@components/works/_githubRepos';
+import ContactForm from '@components/contactForm';
 
-const TopPage = ({ profileComponents, worksComponents, fetchDate }) => {
+type PageProps = {
+  profileItem: {
+    aboutMeItems: Profile.AboutMe.Items;
+    carreerItems: Profile.Career.Items;
+    skillLists: Profile.Skill.Collections;
+    qualifications: Profile.Qualification.Items;
+  };
+  worksItem: {
+    githubRepos: Works.GitHub.Repositories;
+    releases: Works.Release.Items;
+  };
+};
+
+const TopPage: NextPage<PageProps> = (props) => {
+  const { profileItem, worksItem } = props;
   return (
     <Layout>
-      <Profile md={profileComponents.md} json={profileComponents.json} />
-      <Works
-        github={worksComponents.github}
-        works={worksComponents.works}
-        date={fetchDate}
+      <Head>
+        <title>{siteMeta.title}</title>
+        <meta
+          name="description"
+          content={siteMeta.description}
+        />
+      </Head>
+      <h2 className="u__header--mainTitle" id="profile">
+        自己紹介
+      </h2>
+      <AboutMeComponent
+        aboutMeItems={profileItem.aboutMeItems}
       />
+      <CarrerComponent
+        carreerItems={profileItem.carreerItems}
+      />
+      <SkillComponent skillLists={profileItem.skillLists} />
+      <QualificationComponent
+        qualifications={profileItem.qualifications}
+      />
+      <h2 className="u__header--mainTitle" id="works">
+        作成したもの
+      </h2>
+      <ReleaseComponent releases={worksItem.releases} />
+      <GithubRepoComponent
+        githubRepos={worksItem.githubRepos}
+      />
+      <h2 className="u__header--mainTitle" id="contact">
+        お問い合わせ
+      </h2>
+      <ContactForm />
     </Layout>
   );
 };
 
 export default TopPage;
 
-export async function getStaticProps() {
-  const profileComponentsMD = getAllProfileComponentsMD();
-  const profileComponentsJson = getAllComponentsJson(PROFILE_DIRECTORY);
+export const getStaticProps: GetStaticProps<PageProps> =
+  async () => {
+    const aboutMeItems = await aboutMe.getAboutMeItems();
+    const carreerItems = await carreer.getCarreers();
+    const skillLists = await skill.getSkillLists();
+    const qualifications =
+      await qualification.getQualifications();
 
-  const githubPath = 'https://api.github.com/users/' + SiteMeta.social.github;
-  const githubRepos = await fetch(githubPath + '/repos');
-  const githubReposJson: JSON = await githubRepos.json();
+    const githubRepos = await repo.getRepositorys();
+    const releases = await release.getReleases();
 
-  const works = getAllComponentsJson(WORKS_DIRECTORY);
+    const fetchDate = new Date();
 
-  const fetchDate = new Date();
-  const fetchDate_string = fetchDate.toString();
+    setSiteMap(fetchDate);
 
-  setSiteMap(fetchDate);
-
-  return {
-    props: {
-      profileComponents: {
-        md: profileComponentsMD,
-        json: profileComponentsJson,
+    return {
+      props: {
+        profileItem: {
+          aboutMeItems,
+          carreerItems,
+          skillLists,
+          qualifications,
+        },
+        worksItem: {
+          githubRepos,
+          releases,
+        },
       },
-      worksComponents: {
-        works: works,
-        github: githubReposJson,
-      },
-      fetchDate: fetchDate_string,
-    },
+    };
   };
-}
