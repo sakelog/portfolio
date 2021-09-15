@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
 const GTMScript = () => {
-  const GTM_ID = process.env.GTM_ID;
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   return (
     <Script
       strategy="afterInteractive"

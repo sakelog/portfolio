@@ -5,7 +5,6 @@ import Document, {
   NextScript,
 } from 'next/document';
 
-import GTMScript from '@components/GTM/script';
 import GTMNoScript from '@components/GTM/noScript';
 
 class MyDocument extends Document {
@@ -34,14 +33,6 @@ class MyDocument extends Document {
               'https://fonts.googleapis.com/css2?family=Comfortaa&display=swap'
             }
             rel="stylesheet"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html:
-                `(function(w,l){` +
-                `w[l] = w[l] || [];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});` +
-                `})(window,'dataLayer');`,
-            }}
           />
         </Head>
         <body>
