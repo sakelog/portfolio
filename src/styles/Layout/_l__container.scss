@@ -1,8 +1,0 @@
-@use '../Foundation/mixin' as *;
-
-.l__container {
-  padding: 2rem;
-  @include mq(md) {
-    padding: 2rem 4rem;
-  }
-}
