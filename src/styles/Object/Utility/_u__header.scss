@@ -1,0 +1,9 @@
+.u__header--mainTitle {
+  @apply font-bold text-theme text-2xl;
+  @apply mb-4 mt-8 py-2 px-1;
+  @apply border-b-2 border-theme;
+}
+.u__header--subTitle {
+  @apply font-bold border-l-4 border-theme;
+  @apply my-4 py-2 px-2;
+}

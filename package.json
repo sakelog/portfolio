@@ -6,27 +6,37 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "dev-host": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.4",
+    "@octokit/graphql": "^4.8.0",
+    "@tailwindcss/forms": "^0.3.3",
     "date-fns": "^2.16.1",
-    "dotenv": "^8.2.0",
-    "gray-matter": "^4.0.2",
-    "next": "^10.0.4",
+    "graphql": "^15.5.3",
+    "graphql-request": "^3.5.0",
+    "next": "latest",
     "next-pwa": "^5.0.1",
-    "path": "^0.12.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "latest",
+    "react-dom": "latest",
     "react-icons": "^4.1.0",
-    "react-scroll": "^1.8.1",
-    "reset-css-complete": "^2.0.0",
     "sass": "^1.32.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.17",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "autoprefixer": "^10.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "postcss": "^8.3.6",
+    "prettier": "^2.4.0",
+    "tailwindcss": "^2.2.15",
     "typescript": "^4.1.3"
   }
 }
