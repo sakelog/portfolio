@@ -34,7 +34,7 @@ const GithubRepos = (props: PropsType) => {
               <a
                 href={repo.url}
                 target="_blank"
-                rel="noopener noreferer"
+                rel="noopener noreferer noreferrer"
                 className="my-2 font-medium"
               >
                 {repo.name}

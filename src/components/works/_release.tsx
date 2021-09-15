@@ -22,7 +22,7 @@ const Live = (props: PropsType) => {
               <a
                 href={release.url}
                 target="_blank"
-                rel="noopener noreferer"
+                rel="noopener noreferer noreferrer"
               >
                 {release.title}
               </a>
@@ -30,7 +30,7 @@ const Live = (props: PropsType) => {
             <a
               href={release.url}
               target="_blank"
-              rel="noopener noreferer"
+              rel="noopener noreferer noreferrer"
             >
               <Image
                 loader={imageLoader}
