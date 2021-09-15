@@ -35,9 +35,14 @@ class MyDocument extends Document {
             }
             rel="stylesheet"
           />
-          {process.env.NODE_ENV === 'production' && (
-            <GTMScript />
-          )}
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                `(function(w,l){` +
+                `w[l] = w[l] || [];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});` +
+                `})(window,'dataLayer');`,
+            }}
+          />
         </Head>
         <body>
           {process.env.NODE_ENV === 'production' && (
