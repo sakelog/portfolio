@@ -1,6 +1,3 @@
-//import styles from './_career.module.scss';
-import styles from '@styles/Object/Project/_p__career.module.scss';
-
 type PropsType = {
   carreerItems: Profile.Career.Items;
 };
@@ -21,13 +18,26 @@ const Carrer = (props: PropsType) => {
                 <span>～{career.endYmd}</span>
               )}
             </p>
-            <section className={styles.mainSection}>
+            <section
+              className="md:col-span-3 md:border-l md:border-dashed md:border-gray-400
+                           md:pl-4 md:pb-2 md:relative"
+            >
               <h4 className="font-bold">{career.title}</h4>
               <p
                 dangerouslySetInnerHTML={{
                   __html: career.detail,
                 }}
                 className="whitespace-pre-line py-2 px-4 text-sm md:py-0"
+              />
+              <span
+                className="hidden md:block 
+                           bg-theme absolute rounded-full"
+                style={{
+                  width: 10,
+                  height: 10,
+                  top: 6,
+                  left: -5,
+                }}
               />
             </section>
           </li>
