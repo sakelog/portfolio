@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { imageLoader } from '@lib/graphCMS/imageLoader';
-import { getFormattedDateYMJa } from '@lib/util/getFormatDate';
+import { getFormattedDateYYYYMMJa } from '@lib/util/getFormatDate';
 
 type PropsType = {
   qualifications: Profile.Qualification.Items;
@@ -21,7 +21,7 @@ const Qualification = (props: PropsType) => {
               <p className="text-sm text-gray-600 md:text-right md:pr-4">
                 {qualification.yymm && (
                   <>
-                    {getFormattedDateYMJa(
+                    {getFormattedDateYYYYMMJa(
                       qualification.yymm
                     )}
                   </>
