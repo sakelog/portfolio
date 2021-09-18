@@ -35,7 +35,7 @@
     "eslint-config-next": "latest",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "latest",
+    "eslint-plugin-react": "^7.25.2",
     "postcss": "^8.3.6",
     "prettier": "^2.4.0",
     "tailwindcss": "^2.2.15",
