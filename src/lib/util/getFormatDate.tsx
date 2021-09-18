@@ -8,9 +8,21 @@ export const getFormattedDateYMD = (dateString: string) => {
   return formattedDate;
 };
 
-export const getFormattedDateYMJa = (dateString: string) => {
+export const getFormattedDateYYYYMMJa = (
+  dateString: string
+) => {
   const parsedDate = parseISO(dateString);
   const dateFormat = 'yyyy年MM月';
+  const formattedDate = format(parsedDate, dateFormat);
+
+  return formattedDate;
+};
+
+export const getFormattedDateYYYYJa = (
+  dateString: string
+) => {
+  const parsedDate = parseISO(dateString);
+  const dateFormat = 'yyyy年';
   const formattedDate = format(parsedDate, dateFormat);
 
   return formattedDate;

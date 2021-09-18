@@ -1,3 +1,5 @@
+import { getFormattedDateYYYYJa } from '@lib/util/getFormatDate';
+
 type PropsType = {
   carreerItems: Profile.Career.Items;
 };
@@ -13,9 +15,13 @@ const Carrer = (props: PropsType) => {
             className="py-2 md:grid md:grid-cols-4 md:gap-2 md:py-0"
           >
             <p className="text-sm text-gray-600 md:text-right md:pr-4">
-              <span>{career.startYmd}</span>
+              <span>
+                {getFormattedDateYYYYJa(career.startYmd)}
+              </span>
               {career.endYmd && (
-                <span>～{career.endYmd}</span>
+                <span>
+                  ～{getFormattedDateYYYYJa(career.endYmd)}
+                </span>
               )}
             </p>
             <section
