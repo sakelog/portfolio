@@ -7,4 +7,5 @@ module.exports = withPWA({
   images: {
     domains: ['media.graphcms.com'],
   },
+  swcMinify: true,
 });
