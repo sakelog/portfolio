@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore . --fix"
+    "lint": "next lint"
   },
   "dependencies": {
     "@formspree/react": "^2.2.4",
@@ -22,24 +22,25 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.1.0",
+    "rehype-stringify": "^9.0.3",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
     "sass": "^1.32.0",
-    "sharp": "^0.29.1"
+    "sharp": "^0.29.1",
+    "unified": "^10.1.2"
   },
   "devDependencies": {
     "@types/node": "^14.14.17",
-    "@types/react": "^17.0.21",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "autoprefixer": "^10.3.4",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "^12.0.5",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.25.2",
+    "eslint": "^8.13.0",
+    "eslint-config-next": "^12.1.4",
+    "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.4",
     "postcss-resolve-url": "^0.0.1",
     "prettier": "^2.4.0",
     "tailwindcss": "^2.2.15",
-    "typescript": "^4.1.3"
+    "typescript": "^4.6.3"
   }
 }
