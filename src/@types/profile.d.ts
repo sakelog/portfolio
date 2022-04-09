@@ -14,7 +14,7 @@ declare namespace Profile {
       title: string;
       startYmd: string;
       endYmd: string | null;
-      detail: string;
+      detail: string | null;
     }
     declare type Items = Item[];
   }

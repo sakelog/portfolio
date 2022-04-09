@@ -337,33 +337,34 @@ const TopPage: NextPage<PageProps> = (props) => {
 
 export default TopPage;
 
-export const getStaticProps: GetStaticProps<PageProps> =
-  async () => {
-    const aboutMeItems = await aboutMe.getAboutMeItems();
-    const carreerItems = await carreer.getCarreers();
-    const skillLists = await skill.getSkillLists();
-    const qualifications =
-      await qualification.getQualifications();
+export const getStaticProps: GetStaticProps<
+  PageProps
+> = async () => {
+  const aboutMeItems = await aboutMe.getAboutMeItems();
+  const carreerItems = await carreer.getCarreers();
+  const skillLists = await skill.getSkillLists();
+  const qualifications =
+    await qualification.getQualifications();
 
-    const githubRepos = await repo.getRepositorys();
-    const releases = await release.getReleases();
+  const githubRepos = await repo.getRepositorys();
+  const releases = await release.getReleases();
 
-    const fetchDate = new Date();
+  const fetchDate = new Date();
 
-    setSiteMap(fetchDate);
+  setSiteMap(fetchDate);
 
-    return {
-      props: {
-        profileItem: {
-          aboutMeItems,
-          carreerItems,
-          skillLists,
-          qualifications,
-        },
-        worksItem: {
-          githubRepos,
-          releases,
-        },
+  return {
+    props: {
+      profileItem: {
+        aboutMeItems,
+        carreerItems,
+        skillLists,
+        qualifications,
       },
-    };
+      worksItem: {
+        githubRepos,
+        releases,
+      },
+    },
   };
+};
