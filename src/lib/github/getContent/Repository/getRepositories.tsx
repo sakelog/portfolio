@@ -1,8 +1,8 @@
-import { GithubAPIClient } from '@lib/github/client';
+import { githubAPIClient } from 'lib/github/client';
 
-export const getRepositorys = async () => {
+export const getRepositories = async () => {
   const { user }: { user: Works.GitHub.User } =
-    await GithubAPIClient(
+    await githubAPIClient(
       `
       query Query_Repositories{
         user(login: "sakelog") {
@@ -29,3 +29,5 @@ export const getRepositorys = async () => {
 
   return repositories;
 };
+
+export default getRepositories;

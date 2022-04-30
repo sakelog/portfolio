@@ -1,3 +1,5 @@
-import { getRepositorys } from './getRepositorys';
+import { getRepositories } from './getRepositories';
 
-export { getRepositorys };
+export { getRepositories };
+
+export default { getRepositories };

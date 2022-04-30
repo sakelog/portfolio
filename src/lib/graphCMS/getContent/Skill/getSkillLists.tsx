@@ -1,11 +1,11 @@
-import { GraphCMSClient } from '@lib/graphCMS/client';
+import { graphCMSClient } from 'lib/graphCMS/client';
 import { gql } from 'graphql-request';
 
 export const getSkillLists = async () => {
   const {
     skillLists,
   }: { skillLists: Profile.Skill.Collections } =
-    await GraphCMSClient.request(gql`
+    await graphCMSClient.request(gql`
       query Query_SkillLists {
         skillLists(orderBy: orderId_ASC) {
           id
@@ -21,3 +21,5 @@ export const getSkillLists = async () => {
 
   return skillLists;
 };
+
+export default getSkillLists;
