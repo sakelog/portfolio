@@ -14,7 +14,7 @@ import { repo } from 'lib/github/getContent';
 // components
 import siteMeta from 'components/config';
 
-import Layout from 'components/layout';
+import Layout from 'layout';
 // import AboutMeComponent from 'components/profile/_aboutme';
 // import CarrerComponent from 'components/profile/_carreer';
 // import SkillComponent from 'components/profile/_skill';
