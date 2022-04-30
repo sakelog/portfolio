@@ -1,17 +1,4 @@
 declare namespace Works {
-  declare namespace Release {
-    declare type Item = {
-      id: string;
-      title: string;
-      url: string;
-      screenshot: {
-        url: string;
-      } | null;
-      description: string;
-    }
-    declare type Items = Item[];
-  }
-
   declare namespace GitHub {
     declare type Repository = {
       id: string;
@@ -20,16 +7,16 @@ declare namespace Works {
       url: string;
       createdAt: string;
       updatedAt: string | null;
-      primaryLanguage : {
+      primaryLanguage: {
         name: string;
         color: string;
-      }
-    }
+      };
+    };
     declare type Repositories = {
-      nodes : Repository[]
-    }
+      nodes: Repository[];
+    };
     declare type User = {
-      repositories: Repositories
-    }
+      repositories: Repositories;
+    };
   }
 }
