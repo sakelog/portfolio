@@ -18,19 +18,6 @@ declare namespace Profile {
     declare type Items = Item[];
   }
 
-  declare namespace Skill {
-    declare type Skill = {
-      id: string;
-      name: string;
-      star: number;
-    };
-    declare type Collection = {
-      id: string;
-      category: string;
-      skills: Skill[];
-    };
-    declare type Collections = Collection[];
-  }
   declare namespace Qualification {
     declare type Badge = {
       id: string;

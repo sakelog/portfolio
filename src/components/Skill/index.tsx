@@ -1,7 +1,7 @@
 import { HiStar as StarIcon } from 'react-icons/hi';
 
 type PropsType = {
-  skillLists: Profile.Skill.Collections;
+  skillLists: Skill.Collections;
 };
 
 const SkillListsComponent = ({ skillLists }: PropsType) => (

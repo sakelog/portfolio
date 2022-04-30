@@ -26,8 +26,10 @@ type PageProps = {
   profileItem: {
     aboutMeItems: Profile.AboutMe.Items;
     carreerItems: Profile.Carreer.Items;
-    skillLists: Profile.Skill.Collections;
     qualifications: Profile.Qualification.Items;
+  };
+  skillItem: {
+    skillLists: Skill.Collections;
   };
   worksItem: {
     githubRepos: Works.GitHub.Repositories;
@@ -349,8 +351,10 @@ export const getStaticProps: GetStaticProps<
       profileItem: {
         aboutMeItems,
         carreerItems,
-        skillLists,
         qualifications,
+      },
+      skillItem: {
+        skillLists,
       },
       worksItem: {
         githubRepos,
