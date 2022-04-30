@@ -1,0 +1,13 @@
+.c-badge {
+  @apply rounded-2xl text-sm;
+  @apply px-4 py-1;
+  &--theme {
+    @apply bg-theme text-white;
+  }
+  &--gray {
+    @apply bg-gray-dark text-white;
+  }
+  &--red {
+    @apply bg-red-500 text-white;
+  }
+}

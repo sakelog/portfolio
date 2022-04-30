@@ -1,0 +1,29 @@
+.c-heading {
+  &__main-section {
+    @apply relative;
+    @apply py-2 text-2xl;
+    &::after {
+      content: '';
+      @apply absolute bottom-0 left-0;
+      @apply w-full h-2;
+      background: -webkit-repeating-linear-gradient(
+        -45deg,
+        var(--gary-color),
+        var(--gray-color) 2px,
+        #ffffff 2px,
+        #ffffff 4px
+      );
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--gray-color),
+        var(--gray-color) 2px,
+        #ffffff 2px,
+        #ffffff 4px
+      );
+    }
+  }
+  &__sub-section {
+    @apply font-bold text-xl;
+    @apply my-4 py-2;
+  }
+}
