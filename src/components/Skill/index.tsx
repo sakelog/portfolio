@@ -1,10 +1,10 @@
 import { HiStar as StarIcon } from 'react-icons/hi';
 
-type PropsType = {
+type PropTypes = {
   skillLists: Skill.Collections;
 };
 
-const SkillListsComponent = ({ skillLists }: PropsType) => (
+const SkillListsComponent = ({ skillLists }: PropTypes) => (
   <div>
     {skillLists?.map((skillList) => (
       <section
@@ -62,7 +62,7 @@ const SkillListsComponent = ({ skillLists }: PropsType) => (
   </div>
 );
 
-const Skill = ({ skillLists }: PropsType) => (
+const Skill = ({ skillLists }: PropTypes) => (
   <section>
     <h3 className="u__header--subTitle">スキル</h3>
     <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">

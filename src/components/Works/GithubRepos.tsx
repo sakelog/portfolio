@@ -4,11 +4,11 @@ import {
   HiOutlineRefresh,
 } from 'react-icons/hi';
 
-type PropsType = {
+type PropTypes = {
   githubRepos: Works.GitHub.Repositories;
 };
 
-const GithubRepos = ({ githubRepos }: PropsType) => (
+const GithubRepos = ({ githubRepos }: PropTypes) => (
   <section>
     <h3 className="u__header--subTitle">Github Repos</h3>
     <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">

@@ -6,13 +6,13 @@ import {
   HiOutlineChat,
 } from 'react-icons/hi';
 
-type LabelPropsType = Form.Base & Form.FormLabel;
+type LabelPropTypes = Form.Base & Form.FormLabel;
 const FormLabel = ({
   id,
   required,
   icon,
   label,
-}: LabelPropsType) => (
+}: LabelPropTypes) => (
   <label
     className="grid grid-cols-9 gap-1 items-center"
     htmlFor={id}
@@ -31,13 +31,13 @@ const FormLabel = ({
   </label>
 );
 
-type InputPropsType = Form.Base & Form.FormInput;
+type InputPropTypes = Form.Base & Form.FormInput;
 const FormInput = ({
   type,
   id,
   placeholder,
   required,
-}: InputPropsType) =>
+}: InputPropTypes) =>
   type === 'textarea' ? (
     <textarea
       name={id}

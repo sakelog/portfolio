@@ -1,22 +1,25 @@
-type PropsType = {
-  aboutMeItems: Profile.AboutMe.Items;
-};
+import siteMeta from 'components/config';
 
-const AboutMe = ({ aboutMeItems }: PropsType) => (
+const AboutMe = ({
+  aboutMeItems,
+}: {
+  aboutMeItems: Profile.AboutMe.Items;
+}) => (
   <section>
-    <h3 className="u__header--subTitle">Who is sake?</h3>
-    <ul className="py-2 px-4 divide-y divide-dashed divide-gray-400">
-      {aboutMeItems?.map((item) => (
-        <li
-          key={item.id}
-          className="grid grid-cols-1 md:grid-cols-4 my-4 px-2 py-4"
-        >
-          <span className="font-bold">{item.title}</span>
-          <span className="md:col-span-3">
-            {item.detail}
-          </span>
+    <h3 className="text-4xl">{siteMeta.author}</h3>
+    <ul className="py-2 px-4">
+      {aboutMeItems.map((item) => (
+        <li key={item.id} className="my-2">
+          <div className="space-y-2 md:space-y-0 md:flex md:items-center md:space-x-2">
+            <div>
+              <span className="c-badge c-badge--theme">
+                {item.title}
+              </span>
+            </div>
+            <div className="p-2">{item.detail}</div>
+          </div>
         </li>
-      )) || null}
+      ))}
     </ul>
   </section>
 );

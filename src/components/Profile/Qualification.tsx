@@ -2,22 +2,22 @@ import Image from 'next/image';
 import { imageLoader } from 'lib/graphCMS/imageLoader';
 import { getFormattedDateYYYYMMJa } from 'lib/util/getFormatDate';
 
-type PropsType = {
+const Qualification = ({
+  qualifications,
+}: {
   qualifications: Profile.Qualification.Items;
-};
-
-const Qualification = ({ qualifications }: PropsType) => (
-  <section>
-    <h3 className="u__header--subTitle">保有資格</h3>
+}) => (
+  <section className="p-4">
+    <span className="c-badge c-badge--theme">保有資格</span>
     <ul className="py-2 px-4">
       {qualifications?.map((qualification) => {
         const { badge } = qualification;
         return (
           <li
             key={qualification.id}
-            className="py-2 md:grid md:grid-cols-4 md:gap-2 md:py-0"
+            className="c-timeline__root"
           >
-            <p className="text-sm text-gray-600 md:text-right md:pr-4">
+            <p className="c-timeline__date">
               {qualification.yymm && (
                 <>
                   {getFormattedDateYYYYMMJa(
@@ -26,33 +26,24 @@ const Qualification = ({ qualifications }: PropsType) => (
                 </>
               )}
             </p>
-            <section
-              className="md:col-span-3 md:border-l md:border-dashed md:border-gray-400
-                           md:pl-4 md:pb-2 md:relative"
-            >
-              <p className="font-bold">
-                {qualification.name}
-              </p>
-              {badge && (
-                <Image
-                  loader={imageLoader}
-                  alt={badge.title}
-                  src={badge.image.url}
-                  height={badge.height}
-                  width={badge.width}
-                  layout="intrinsic"
-                />
-              )}
-              <span
-                className="hidden md:block 
-                             bg-theme absolute rounded-full"
-                style={{
-                  width: 10,
-                  height: 10,
-                  top: 6,
-                  left: -5,
-                }}
-              />
+            <section className="c-timeline__item">
+              <div className="md:grid md:grid-cols-2 md:max-w-screen-sm">
+                <p className="font-bold">
+                  {qualification.name}
+                </p>
+                {badge && (
+                  <div className="hidden md:block text-center">
+                    <Image
+                      loader={imageLoader}
+                      alt={badge.title}
+                      src={badge.image.url}
+                      height={badge.height}
+                      width={badge.width}
+                      layout="intrinsic"
+                    />
+                  </div>
+                )}
+              </div>
             </section>
           </li>
         );
