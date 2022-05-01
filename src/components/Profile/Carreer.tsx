@@ -16,7 +16,11 @@ const Carrer = ({
             </span>
             {carreer.endYmd && (
               <span>
-                ～{getFormattedDateYYYYJa(carreer.endYmd)}
+                ～
+                {getFormattedDateYYYYJa(
+                  carreer.endYmd,
+                  true
+                )}
               </span>
             )}
           </p>
