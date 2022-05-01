@@ -16,7 +16,7 @@ const QiitaArticles = ({
     <section className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-4">
       {qiitaArticles.map((article) => (
         <section
-          key={article.id}
+          key={`qiitaarticle-${article.id}`}
           className="border-2 border-gray rounded-md p-4 overflow-hidden"
         >
           <div className="border-b border-gray py-2">
@@ -29,7 +29,7 @@ const QiitaArticles = ({
             <ul className="flex flex-wrap gap-2 mt-2">
               {article.tags.map((tag) => (
                 <li
-                  key={tag.id}
+                  key={`qiitaarticle-${article.id}-tag-${tag.name}`}
                   className="c-badge c-badge--gray"
                 >
                   {tag.name}

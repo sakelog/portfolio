@@ -1,22 +1,15 @@
 import { HiStar } from 'react-icons/hi';
 
-const StarIcon = ({
-  on,
-  keyphrase,
-}: {
-  on?: boolean;
-  keyphrase: React.Key;
-}) => (
+const StarIcon = ({ on }: { on?: boolean }) => (
   <HiStar
     className={on ? 'text-yellow-400' : 'text-white'}
     stroke="rgba(251, 191, 36)"
     strokeWidth={1}
-    key={keyphrase}
     size="22"
   />
 );
 StarIcon.defaultProps = {
-  on: true,
+  on: false,
 };
 
 const StarIconCollection = ({
@@ -31,23 +24,16 @@ const StarIconCollection = ({
     MAX_STAR - 1
   );
   for (let i = 0; i < times; i += 1) {
-    star.push(
-      <StarIcon
-        keyphrase={`${
-          keyphrase && `${keyphrase}-`
-        }onstar-${i}-of-${times}`}
-        on
-      />
-    );
+    const onKeyPhrase = `${keyphrase}-onstar-${
+      i + 1
+    }-of-${times}`;
+    star.push(<StarIcon key={onKeyPhrase} on />);
   }
   for (let i = 0; i < MAX_STAR - times; i += 1) {
-    star.push(
-      <StarIcon
-        keyphrase={`${
-          keyphrase && `${keyphrase}-`
-        }offstar-${i}-of-${times}`}
-      />
-    );
+    const offKeyPhrase = `${keyphrase}-offstar-${
+      i + 1
+    }-of-${MAX_STAR - times}`;
+    star.push(<StarIcon key={offKeyPhrase} />);
   }
   return <span className="col-span-2 flex">{star}</span>;
 };
