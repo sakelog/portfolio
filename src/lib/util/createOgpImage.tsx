@@ -25,7 +25,7 @@ export const createOgpImage = async (title: string) => {
       localOgpImageDir,
       ogpImageFileName
     );
-    const publicPath = `${siteMeta.url}/public/img/ogp/${ogpImageFileName}`;
+    const publicPath = `${siteMeta.url}/img/ogp/${ogpImageFileName}`;
 
     try {
       fs.statSync(localPath);
