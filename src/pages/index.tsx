@@ -18,7 +18,7 @@ import Layout from 'layout';
 import Profile from 'components/Profile';
 import Skill from 'components/Skill';
 import Works from 'components/Works';
-// import ContactForm from 'components/contactForm';
+import ContactForm from 'components/ContactForm';
 
 type PageProps = {
   profileItem: {
@@ -320,6 +320,7 @@ const TopPage: NextPage<PageProps> = ({
       />
       <Skill skillLists={skillLists} />
       <Works githubRepos={githubRepos} />
+      <ContactForm />
       {/* <h2 className="u__header--mainTitle" id="profile">
         自己紹介
       </h2>
