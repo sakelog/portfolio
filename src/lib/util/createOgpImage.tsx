@@ -27,12 +27,11 @@ export const createOgpImage = async (title: string) => {
     );
     const publicPath = `${siteMeta.url}/public/img/ogp/${ogpImageFileName}`;
 
-    console.log(localPath);
-
     try {
       fs.statSync(localPath);
       return publicPath;
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.log(`ogp image create for : ${title}`);
     }
 
