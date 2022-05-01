@@ -2,7 +2,11 @@ import Head from 'next/head';
 
 import siteMeta from 'components/config';
 
-const MyHead = () => (
+const MyHead = ({
+  ogpImagePath,
+}: {
+  ogpImagePath: string;
+}) => (
   <Head>
     <title>{siteMeta.title}</title>
     <meta
@@ -15,10 +19,7 @@ const MyHead = () => (
       content={siteMeta.description}
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content={`${siteMeta.url}/img/ogimage.png`}
-    />
+    <meta property="og:image" content={ogpImagePath} />
     <meta
       name="twitter:card"
       content="summary_large_image"

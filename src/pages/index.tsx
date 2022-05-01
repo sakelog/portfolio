@@ -2,6 +2,7 @@ import type { NextPage, GetStaticProps } from 'next';
 
 // lib
 import { setSiteMap } from 'lib/setStitemap';
+import { createOgpImage } from 'lib/util/createOgpImage';
 import {
   aboutMe,
   carreer,
@@ -12,6 +13,7 @@ import github from 'lib/github/getContent';
 import qiita from 'lib/qiita/getContent';
 
 // components
+import siteMeta from 'components/config';
 import Layout from 'layout';
 import MyHead from 'components/MyHead';
 import Profile from 'components/Profile';
@@ -30,16 +32,22 @@ type PageProps = {
     githubRepos?: Works.GitHub.Repositories;
     qiitaArticles?: Works.Qiita.Article[];
   };
+  ogpImagePath: string;
 };
 
 const TopPage: NextPage<PageProps> = (props) => {
-  const { profileItem, skillLists, worksItem } = props;
+  const {
+    profileItem,
+    skillLists,
+    worksItem,
+    ogpImagePath,
+  } = props;
   const { aboutMeItems, carreerItems, qualifications } =
     profileItem;
   const { githubRepos, qiitaArticles } = worksItem;
   return (
     <Layout>
-      <MyHead />
+      <MyHead ogpImagePath={ogpImagePath} />
       <Profile
         aboutMeItems={aboutMeItems}
         carreerItems={carreerItems}
@@ -73,6 +81,8 @@ export const getStaticProps: GetStaticProps<
   process.env.NODE_ENV === 'production' &&
     setSiteMap(new Date());
 
+  const ogpImagePath = await createOgpImage(siteMeta.title);
+
   return {
     props: {
       profileItem: {
@@ -85,6 +95,7 @@ export const getStaticProps: GetStaticProps<
         githubRepos,
         qiitaArticles,
       },
+      ogpImagePath,
     },
   };
 };
