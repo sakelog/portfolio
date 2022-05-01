@@ -1,7 +1,7 @@
 import { format, parseISO, isFuture } from 'date-fns';
 
 const checkNotFuture = (targetDate: Date) =>
-  isFuture(targetDate) ? false : true;
+  !isFuture(targetDate);
 
 export const getFormattedDateYMD = (
   dateString: string,
