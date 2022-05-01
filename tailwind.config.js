@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         theme: {
           DEFAULT: 'var(--theme-color)',
+          dark: 'var(--theme-color-dark)',
         },
         gray: {
           DEFAULT: 'var(--gray-color)',

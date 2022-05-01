@@ -14,7 +14,7 @@ const WithIconList = (props: {
   const { children } = props;
   const childrenArray = React.Children.toArray(children);
   return (
-    <ul>
+    <ul className="space-y-2">
       {childrenArray.map((child, index) => (
         <li
           key={`header-icon-list-${index}`}
