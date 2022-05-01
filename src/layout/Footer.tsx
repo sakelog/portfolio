@@ -1,9 +1,9 @@
-import siteMeta from '@components/config';
+import siteMeta from 'components/config';
 
 const Footer = () => {
   const nowYear = new Date().getFullYear();
   return (
-    <footer className="bg-gray-800 text-white p-4">
+    <footer className="bg-gray-dark text-white p-4">
       <p className="text-sm text-center">
         &copy;{nowYear} {siteMeta.title + '.'}
       </p>

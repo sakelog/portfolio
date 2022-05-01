@@ -27,3 +27,9 @@ export const getFormattedDateYYYYJa = (
 
   return formattedDate;
 };
+
+export default {
+  getFormattedDateYMD,
+  getFormattedDateYYYYJa,
+  getFormattedDateYYYYMMJa,
+};

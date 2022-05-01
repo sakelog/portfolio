@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { format } from 'date-fns';
-import siteMeta from '@components/config';
+import siteMeta from 'components/config';
 
 export function setSiteMap(fetchDate: Date) {
   let sitemapString: string;
@@ -25,7 +25,10 @@ export function setSiteMap(fetchDate: Date) {
     sitemapString,
     'utf8',
     () => {
+      // eslint-disable-next-line no-console
       console.log('Sitemap.xml saved');
     }
   );
 }
+
+export default setSiteMap;

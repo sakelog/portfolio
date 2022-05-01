@@ -1,11 +1,11 @@
-import { GraphCMSClient } from '@lib/graphCMS/client';
+import { graphCMSClient } from 'lib/graphCMS/client';
 import { gql } from 'graphql-request';
 
 export const getQualifications = async () => {
   const {
     qualifications,
   }: { qualifications: Profile.Qualification.Items } =
-    await GraphCMSClient.request(gql`
+    await graphCMSClient.request(gql`
       query Query_Qualifications {
         qualifications(orderBy: yymm_ASC) {
           id
@@ -26,3 +26,5 @@ export const getQualifications = async () => {
 
   return qualifications;
 };
+
+export default getQualifications;

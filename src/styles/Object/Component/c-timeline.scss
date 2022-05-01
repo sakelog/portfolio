@@ -1,0 +1,21 @@
+.c-timeline {
+  &__root {
+    @apply py-2 md:grid md:grid-cols-4 md:gap-2 md:py-0;
+  }
+  &__date {
+    @apply text-sm text-gray-600 md:text-right md:pr-4;
+  }
+  &__item {
+    @apply md:col-span-3;
+    @apply md:border-l md:border-dashed md:border-gray;
+    @apply md:pl-4 md:pb-2 md:relative;
+    &::after {
+      content: '';
+      @apply hidden md:block bg-gray absolute rounded-full;
+      width: 10px;
+      height: 10px;
+      top: 6px;
+      left: -5px;
+    }
+  }
+}

@@ -3,9 +3,12 @@
 // Layout------------------------------------
 // Object------------------------------------
 // Component
+@use './Object/Component/c-heading.scss';
+@use './Object/Component/c-badge.scss';
+@use './Object/Component/c-timeline.scss';
 // Project
+@use './Object/Project/p-carreer.scss';
 // Utility
-@use './Object/Utility/u__header';
 
 //Tailwind-----------------------------------
 @tailwind base;

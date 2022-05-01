@@ -13,3 +13,5 @@ export const markdownToHtml = (markdown: string) => {
 
   return convertedHTML;
 };
+
+export default markdownToHtml;

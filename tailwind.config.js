@@ -9,8 +9,12 @@ module.exports = {
     extend: {
       colors: {
         theme: {
-          DEFAULT: '#3675a9',
-          light: '#cce8ff',
+          DEFAULT: 'var(--theme-color)',
+        },
+        gray: {
+          DEFAULT: 'var(--gray-color)',
+          light: 'var(--gray-color-light)',
+          dark: 'var(--gray-color-dark)',
         },
       },
       fontFamily: {
@@ -29,7 +33,6 @@ module.exports = {
           'Meiryo',
           'sans-serif',
         ],
-        logo: ['Comfortaa', 'sans-serif'],
       },
     },
   },
