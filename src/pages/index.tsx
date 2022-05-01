@@ -18,11 +18,6 @@ import Layout from 'layout';
 import Profile from 'components/Profile';
 import Skill from 'components/Skill';
 import Works from 'components/Works';
-// import AboutMeComponent from 'components/profile/_aboutme';
-// import CarrerComponent from 'components/profile/_carreer';
-// import SkillComponent from 'components/profile/_skill';
-// import QualificationComponent from 'components/profile/_qualification';
-// import GithubRepoComponent from 'components/works/_githubRepos';
 // import ContactForm from 'components/contactForm';
 
 type PageProps = {

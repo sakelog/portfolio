@@ -1,4 +1,4 @@
-import GitHubRepos from 'components/Works/GithubRepos';
+import GitHubRepos from 'components/Works/GitHubRepos';
 
 type PropTypes = {
   githubRepos: Works.GitHub.Repositories;
