@@ -19,7 +19,11 @@ const NavItem = ({
     >
       {title}
     </a>
-    <a href={`#${id}`} className="text-white">
+    <a
+      href={`#${id}`}
+      className="text-white"
+      aria-label={`${id} icon`}
+    >
       {icon}
     </a>
   </div>

@@ -3,12 +3,13 @@
     @apply font-sans text-gray-800;
     scroll-behavior: smooth;
     a {
-      @apply text-theme underline;
+      @apply text-theme-dark underline;
     }
   }
 }
 :root {
-  --theme-color: #2792c3;
+  --theme-color: #4a93ba;
+  --theme-color-dark: #007bbb;
   --gray-color: #c2c2c2;
   --gray-color-light: #f6f6f6;
   --gray-color-dark: #4d4d4d;

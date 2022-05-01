@@ -142,7 +142,7 @@ const ContactForm = () => {
           />
           <button
             type="submit"
-            className="bg-theme text-white px-4 py-2 block w-32 mx-auto rounded"
+            className="bg-theme-dark text-white px-4 py-2 block w-32 mx-auto rounded"
             disabled={state.submitting}
           >
             送信

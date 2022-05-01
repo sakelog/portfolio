@@ -20,9 +20,9 @@ const LegendItem = ({
 
 const Legend = () => (
   <section className="space-y-2 bg-gray-light p-4 rounded-md overflow-hidden">
-    <h4 className="mb-4 py-2 border-b border-gray text-center">
+    <h3 className="mb-4 py-2 border-b border-gray text-center">
       基準
-    </h4>
+    </h3>
     <LegendItem
       times={5}
       detail={
