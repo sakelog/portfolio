@@ -1,31 +1,57 @@
-import { format, parseISO } from 'date-fns';
+import { format, parseISO, isFuture } from 'date-fns';
 
-export const getFormattedDateYMD = (dateString: string) => {
+const checkNotFuture = (targetDate: Date) =>
+  !isFuture(targetDate);
+
+export const getFormattedDateYMD = (
+  dateString: string,
+  futureCheck?: boolean
+) => {
   const parsedDate = parseISO(dateString);
   const dateFormat = 'yyyy-MM-dd';
-  const formattedDate = format(parsedDate, dateFormat);
+  const formattedDate = futureCheck
+    ? checkNotFuture(parsedDate) &&
+      format(parsedDate, dateFormat)
+    : format(parsedDate, dateFormat);
 
-  return formattedDate;
+  return formattedDate || '';
+};
+getFormattedDateYMD.defaultProps = {
+  futureCheck: false,
 };
 
 export const getFormattedDateYYYYMMJa = (
-  dateString: string
+  dateString: string,
+  futureCheck?: boolean
 ) => {
   const parsedDate = parseISO(dateString);
   const dateFormat = 'yyyy年MM月';
-  const formattedDate = format(parsedDate, dateFormat);
+  const formattedDate = futureCheck
+    ? checkNotFuture(parsedDate) &&
+      format(parsedDate, dateFormat)
+    : format(parsedDate, dateFormat);
 
-  return formattedDate;
+  return formattedDate || '';
+};
+getFormattedDateYYYYMMJa.defaultProps = {
+  futureCheck: false,
 };
 
 export const getFormattedDateYYYYJa = (
-  dateString: string
+  dateString: string,
+  futureCheck?: boolean
 ) => {
   const parsedDate = parseISO(dateString);
   const dateFormat = 'yyyy年';
-  const formattedDate = format(parsedDate, dateFormat);
+  const formattedDate = futureCheck
+    ? checkNotFuture(parsedDate) &&
+      format(parsedDate, dateFormat)
+    : format(parsedDate, dateFormat);
 
-  return formattedDate;
+  return formattedDate || '';
+};
+getFormattedDateYYYYJa.defaultProps = {
+  futureCheck: false,
 };
 
 export default {
