@@ -10,7 +10,7 @@ const AboutMe = ({
     <ul className="py-2 px-4">
       {aboutMeItems.map((item) => (
         <li key={item.id} className="my-2">
-          <div className="space-y-2 md:space-y-0 md:flex md:items-center md:space-x-2">
+          <div className="space-y-2 md:space-y-0 md:flex md:flex-wrap md:items-center md:gap-2">
             <div>
               <span className="c-badge c-badge--theme">
                 {item.title}
