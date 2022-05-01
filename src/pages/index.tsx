@@ -69,10 +69,9 @@ export const getStaticProps: GetStaticProps<
   const githubRepos = await github.repo.getRepositories();
   const qiitaArticles = await qiita.article.getArticles();
 
-  const fetchDate = new Date();
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   process.env.NODE_ENV === 'production' &&
-    setSiteMap(fetchDate);
+    setSiteMap(new Date());
 
   return {
     props: {
