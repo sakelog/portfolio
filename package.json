@@ -1,7 +1,7 @@
 {
-  "name": "sake-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "sakeのポートフォリオサイト",
+  "description": "Source code for the portfolio site. GraphCMS, GitHub API v4, and Qiita Api v2 on Next.js.",
   "author": "sake <sakelog.website@gmail.com>",
   "license": "MIT",
   "packageManager": "yarn@3.2.0",
