@@ -4,6 +4,7 @@
   "description": "sakeのポートフォリオサイト",
   "author": "sake <sakelog.website@gmail.com>",
   "license": "MIT",
+  "packageManager": "yarn@3.2.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -36,7 +37,7 @@
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
-    "autoprefixer": "^10.3.4",
+    "autoprefixer": "^10.4.7",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -46,7 +47,12 @@
     "postcss": "^8.4.4",
     "postcss-resolve-url": "^0.0.1",
     "prettier": "^2.6.2",
-    "tailwindcss": "^2.2.15",
+    "tailwindcss": "^3.0.24",
     "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react-hooks": "4.3.0"
   }
 }

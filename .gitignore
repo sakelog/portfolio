@@ -17,5 +17,12 @@ public/workbox-*
 public/sitemap.xml
 # OGP
 public/img/ogp/
-
+# Vercel
 .vercel
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
