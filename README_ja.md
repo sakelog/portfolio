@@ -6,6 +6,8 @@
 
 <div align="center">
 
+  ![screenshot_portfolio](https://user-images.githubusercontent.com/60056078/166861224-26eec22c-de6c-4cb1-a1ad-4d8642f7e158.png)
+  
 </div>
   
 <div align="center">
