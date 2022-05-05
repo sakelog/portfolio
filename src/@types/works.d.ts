@@ -18,7 +18,9 @@ declare namespace Works {
       createdAt: string;
       updatedAt: string | null;
       languages: {
+        totalSize: number;
         edges: {
+          size: number;
           node: {
             name: string;
             id: string;
