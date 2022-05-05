@@ -87,7 +87,7 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT="your Formspree endpoint"
 単純なプロフィール項目
 
 | field  | type             | unique | required | Title |
-| :----- | :--------------- | :----- | :------- | :---- |
+| :----- | :--------------- | :----: | :------: | :---: |
 | title  | Single line text |        |          | ✅     |
 | detail | Single line text |        |          |       |
 
@@ -96,7 +96,7 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT="your Formspree endpoint"
 資格のバッジを登録
 
 | field  | type             | unique | required | Title |
-| :----- | :--------------- | :----- | :------- | :---- |
+| :----- | :--------------- | :----: | :------: | :---: |
 | image  | Asset picker     |        | ✅        |       |
 | title  | Single line text | ✅      | ✅        | ✅     |
 | width  | Number           |        |          |       |
@@ -110,7 +110,7 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT="your Formspree endpoint"
 経歴を登録
 
 | field    | type             | unique | required | Title |
-| :------- | :--------------- | :----- | :------- | :---- |
+| :------- | :--------------- | :----: | :------: | :---: |
 | title    | Single line text |        | ✅        | ✅     |
 | startYMD | Date             |        | ✅        |       |
 | endYMD   | Date             |        |          |       |
@@ -123,7 +123,7 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT="your Formspree endpoint"
 取得した資格を登録
 
 | field | type             | unique | required | Title |
-| :---- | :--------------- | :----- | :------- | :---- |
+| :---- | :--------------- | :----: | :------: | :---: |
 | name  | Single line text | ✅      | ✅        | ✅     |
 | YYMM  | Date             |        |          |       |
 | Badge | Reference        |        |          |       |
@@ -135,7 +135,7 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT="your Formspree endpoint"
 スキルを登録
 
 | field | type             | unique | required | Title |
-| :---- | :--------------- | :----- | :------- | :---- |
+| :---- | :--------------- | :----: | :------: | :---: |
 | name  | Single line text | ✅      | ✅        | ✅     |
 | star  | Float            |        |          |       |
 
@@ -146,7 +146,7 @@ NEXT_PUBLIC_FORMSPREE_ENDPOINT="your Formspree endpoint"
 スキルをグループ分けする
 
 | field    | type             | unique | required | Title |
-| :------- | :--------------- | :----- | :------- | :---- |
+| :------- | :--------------- | :----: | :------: | :---: |
 | category | Single line text | ✅      | ✅        | ✅     |
 | Skills   | Referense        |        |          |       |
 | orderID  | Number           |        |          |       |
