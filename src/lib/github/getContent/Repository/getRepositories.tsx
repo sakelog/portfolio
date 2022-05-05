@@ -21,6 +21,7 @@ export const getRepositories = async () => {
               createdAt
               updatedAt
               languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
+                totalSize
                 edges {
                   size
                   node {
