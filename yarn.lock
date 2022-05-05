@@ -5747,6 +5747,52 @@ __metadata:
   languageName: node
   linkType: hard
 
+"portfolio@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "portfolio@workspace:."
+  dependencies:
+    "@formspree/react": ^2.2.4
+    "@octokit/graphql": ^4.8.0
+    "@tailwindcss/forms": ^0.5.0
+    "@tsconfig/next": ^1.0.2
+    "@types/node": ^14.14.17
+    "@types/react": ^18.0.0
+    "@types/react-dom": ^18.0.0
+    "@typescript-eslint/eslint-plugin": ^5.21.0
+    "@typescript-eslint/parser": ^5.21.0
+    autoprefixer: ^10.4.7
+    date-fns: ^2.16.1
+    eslint: ^8.13.0
+    eslint-config-airbnb: ^19.0.4
+    eslint-config-airbnb-typescript: ^17.0.0
+    eslint-config-next: ^12.1.4
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-react: ^7.29.4
+    graphql: ^15.5.3
+    graphql-request: ^3.5.0
+    next: ^12.0.5
+    next-pwa: ^5.0.1
+    playwright: ^1.21.1
+    postcss: ^8.4.4
+    postcss-resolve-url: ^0.0.1
+    prettier: ^2.6.2
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    react-icons: ^4.1.0
+    rehype-stringify: ^9.0.3
+    remark-parse: ^10.0.1
+    remark-rehype: ^10.1.0
+    sass: ^1.32.0
+    tailwindcss: ^3.0.24
+    typescript: ^4.6.3
+    unified: ^10.1.2
+  peerDependencies:
+    eslint-plugin-import: 2.25.3
+    eslint-plugin-jsx-a11y: 6.5.1
+    eslint-plugin-react-hooks: 4.3.0
+  languageName: unknown
+  linkType: soft
+
 "postcss-js@npm:^4.0.0":
   version: 4.0.0
   resolution: "postcss-js@npm:4.0.0"
@@ -6320,52 +6366,6 @@ __metadata:
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
   languageName: node
   linkType: hard
-
-"sake-portfolio@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "sake-portfolio@workspace:."
-  dependencies:
-    "@formspree/react": ^2.2.4
-    "@octokit/graphql": ^4.8.0
-    "@tailwindcss/forms": ^0.5.0
-    "@tsconfig/next": ^1.0.2
-    "@types/node": ^14.14.17
-    "@types/react": ^18.0.0
-    "@types/react-dom": ^18.0.0
-    "@typescript-eslint/eslint-plugin": ^5.21.0
-    "@typescript-eslint/parser": ^5.21.0
-    autoprefixer: ^10.4.7
-    date-fns: ^2.16.1
-    eslint: ^8.13.0
-    eslint-config-airbnb: ^19.0.4
-    eslint-config-airbnb-typescript: ^17.0.0
-    eslint-config-next: ^12.1.4
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-react: ^7.29.4
-    graphql: ^15.5.3
-    graphql-request: ^3.5.0
-    next: ^12.0.5
-    next-pwa: ^5.0.1
-    playwright: ^1.21.1
-    postcss: ^8.4.4
-    postcss-resolve-url: ^0.0.1
-    prettier: ^2.6.2
-    react: ^18.0.0
-    react-dom: ^18.0.0
-    react-icons: ^4.1.0
-    rehype-stringify: ^9.0.3
-    remark-parse: ^10.0.1
-    remark-rehype: ^10.1.0
-    sass: ^1.32.0
-    tailwindcss: ^3.0.24
-    typescript: ^4.6.3
-    unified: ^10.1.2
-  peerDependencies:
-    eslint-plugin-import: 2.25.3
-    eslint-plugin-jsx-a11y: 6.5.1
-    eslint-plugin-react-hooks: 4.3.0
-  languageName: unknown
-  linkType: soft
 
 "sass@npm:^1.32.0":
   version: 1.51.0
