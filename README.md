@@ -5,6 +5,8 @@ Source code for the portfolio site. GraphCMS, GitHub API v4, and Qiita Api v2 on
 [README 日本語版](/README_ja.md)
 
 <div align="center">
+  
+![screenshot_portfolio](https://user-images.githubusercontent.com/60056078/166861224-26eec22c-de6c-4cb1-a1ad-4d8642f7e158.png)
 
 </div>
   
@@ -87,7 +89,7 @@ With the following schema, you can create a similar portfolio site.
 Simple profile items.
 
 | field  | type             | unique | required | Title |
-| :----- | :--------------- | :----- | :------- | :---- |
+| :----- | :--------------- | :----: | :------: | :---: |
 | title  | Single line text |        |          | ✅     |
 | detail | Single line text |        |          |       |
 
@@ -96,7 +98,7 @@ Simple profile items.
 Register your badge of qualification.
 
 | field  | type             | unique | required | Title |
-| :----- | :--------------- | :----- | :------- | :---- |
+| :----- | :--------------- | :----: | :------: | :---: |
 | image  | Asset picker     |        | ✅        |       |
 | title  | Single line text | ✅      | ✅        | ✅     |
 | width  | Number           |        |          |       |
@@ -110,7 +112,7 @@ Register your badge of qualification.
 Register your work history.
 
 | field    | type             | unique | required | Title |
-| :------- | :--------------- | :----- | :------- | :---- |
+| :------- | :--------------- | :----: | :------: | :---: |
 | title    | Single line text |        | ✅        | ✅     |
 | startYMD | Date             |        | ✅        |       |
 | endYMD   | Date             |        |          |       |
@@ -123,7 +125,7 @@ Register your work history.
 Register qualifications you have.
 
 | field | type             | unique | required | Title |
-| :---- | :--------------- | :----- | :------- | :---- |
+| :---- | :--------------- | :----: | :------: | :---: |
 | name  | Single line text | ✅      | ✅        | ✅     |
 | YYMM  | Date             |        |          |       |
 | Badge | Reference        |        |          |       |
@@ -135,7 +137,7 @@ Register qualifications you have.
 Register your skills.
 
 | field | type             | unique | required | Title |
-| :---- | :--------------- | :----- | :------- | :---- |
+| :---- | :--------------- | :----: | :------: | :---: |
 | name  | Single line text | ✅      | ✅        | ✅     |
 | star  | Float            |        |          |       |
 
@@ -146,7 +148,7 @@ Register your skills.
 Grouping skills.
 
 | field    | type             | unique | required | Title |
-| :------- | :--------------- | :----- | :------- | :---- |
+| :------- | :--------------- | :----: | :------: | :---: |
 | category | Single line text | ✅      | ✅        | ✅     |
 | Skills   | Referense        |        |          |       |
 | orderID  | Number           |        |          |       |
