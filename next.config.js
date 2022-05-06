@@ -1,5 +1,5 @@
 /**
- * @type { import("next").NextConfig}
+ * @type { import('next').NextConfig}
  */
 
 const withPWA = require('next-pwa');
@@ -10,7 +10,6 @@ module.exports = withPWA({
   },
   images: {
     loader: 'custom',
-    domains: ['media.graphassets.com'],
   },
   swcMinify: true,
 });
