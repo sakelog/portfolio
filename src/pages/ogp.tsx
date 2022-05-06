@@ -16,6 +16,7 @@ const OgpPage: NextPage = () => {
     >
       <div className="bg-theme flex items-center justify-center">
         <Image
+          loader={({ src }) => src}
           src="/img/profile.png"
           alt="profile icon"
           width={200}

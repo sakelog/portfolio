@@ -31,6 +31,7 @@ const Header = () => {
   return (
     <header className="relative bg-gray-400">
       <Image
+        loader={({ src }) => src}
         src="/img/bg-img.png"
         layout="fill"
         objectFit="cover"
@@ -40,6 +41,7 @@ const Header = () => {
       <div className="overflow-hidden px-2 py-4 relative z-10">
         <div className="flex justify-center">
           <Image
+            loader={({ src }) => src}
             src="/img/profile.png"
             alt={`${siteMeta.author}_プロフィール画像`}
             width={200}
