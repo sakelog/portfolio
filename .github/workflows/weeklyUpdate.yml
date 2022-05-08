@@ -15,14 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: main
       - name : git commit & push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git checkout -b weekly-update
-          git pull origin weekly-update
           git commit --allow-empty -m "weekly update"
-          git push --set-upstream origin weekly-update
+          git push
