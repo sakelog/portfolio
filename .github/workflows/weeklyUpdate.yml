@@ -15,11 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: weekly-update
       - name : git commit & push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git checkout -b weekly-update
           git commit --allow-empty -m "weekly update"
           git push
