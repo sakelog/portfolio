@@ -24,5 +24,5 @@ jobs:
           git config user.email github-actions@github.com
           git checkout -b weekly-update
           git commit --allow-empty -m "weekly update"
-          git push
+          git push --set-upstream origin weekly-update
           git branch -d weekly-update
