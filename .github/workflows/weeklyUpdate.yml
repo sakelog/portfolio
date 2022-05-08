@@ -21,6 +21,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git checkout -b weekly-update
           git commit --allow-empty -m "weekly update"
           git push origin weekly-update
